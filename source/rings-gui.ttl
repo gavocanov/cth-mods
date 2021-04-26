@@ -1,0 +1,66 @@
+@prefix modgui: <http://moddevices.com/ns/modgui#> .
+@prefix lv2:    <http://lv2plug.in/ns/lv2core#> .
+
+<http://polyeffects.com/lv2/polyrings>
+    modgui:gui [
+        modgui:resourcesDirectory <modgui> ;
+        modgui:iconTemplate <modgui/icon-rings.html> ;
+        modgui:stylesheet <modgui/stylesheet-rings.css> ;
+        modgui:screenshot <modgui/screenshot-rings.png> ;
+        modgui:thumbnail <modgui/thumbnail-rings.png> ;
+        modgui:brand "Poly" ;
+        modgui:label "Rings" ;
+        modgui:port [
+            lv2:index 0 ;
+            lv2:symbol "polyphony_param" ;
+            lv2:name "Polyphony" ;
+        ] , [
+            lv2:index 1 ;
+            lv2:symbol "resonator_param" ;
+            lv2:name "Resonator" ;
+        ] , [
+            lv2:index 2 ;
+            lv2:symbol "frequency_param" ;
+            lv2:name "Frequency" ;
+        ] , [
+            lv2:index 3 ;
+            lv2:symbol "structure_param" ;
+            lv2:name "Structure" ;
+        ] , [
+            lv2:index 4 ;
+            lv2:symbol "brightness_param" ;
+            lv2:name "Brightness" ;
+        ] , [
+            lv2:index 5 ;
+            lv2:symbol "damping_param" ;
+            lv2:name "Damping" ;
+        ] , [
+            lv2:index 6 ;
+            lv2:symbol "position_param" ;
+            lv2:name "Position" ;
+        ] , [
+            lv2:index 7 ;
+            lv2:symbol "brightness_mod_param" ;
+            lv2:name "Brightness Mod" ;
+        ] , [
+            lv2:index 8 ;
+            lv2:symbol "frequency_mod_param" ;
+            lv2:name "Frequency Mod" ;
+        ] , [
+            lv2:index 9 ;
+            lv2:symbol "damping_mod_param" ;
+            lv2:name "Damping Mod" ;
+        ] , [
+            lv2:index 10 ;
+            lv2:symbol "structure_mod_param" ;
+            lv2:name "Structure Mod" ;
+        ] , [
+            lv2:index 11 ;
+            lv2:symbol "position_mod_param" ;
+            lv2:name "Position Mod" ;
+        ] , [
+            lv2:index 12 ;
+            lv2:symbol "internal_exciter_param" ;
+            lv2:name "Internal Exciter" ;
+        ] ;
+    ] .

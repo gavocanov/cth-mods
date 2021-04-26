@@ -1,0 +1,139 @@
+<div class="mod-pedal plaits{{{cns}}}">
+    <div mod-role="drag-handle" class="mod-drag-handle"></div>
+    <div class="mod-light on" mod-role="bypass-light"></div>
+    <div class="mod-control-group g1">
+        <!-- model -->
+        {{#controls.0}}
+        <div class="mod-knob plaits-{{symbol}}" title="{{name}}">
+            <div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+        </div>
+        {{/controls.0}}
+    </div>
+    <div class="mod-control-group g2">
+        <!-- freq -->
+        {{#controls.1}}
+        <div class="mod-knob plaits-{{symbol}}" title="{{name}}">
+            <div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+        </div>
+        {{/controls.1}}
+        <!-- harm -->
+        {{#controls.2}}
+        <div class="mod-knob plaits-{{symbol}}" title="{{name}}">
+            <div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+        </div>
+        {{/controls.2}}
+    </div>
+    <div class="mod-control-group g3">
+        <!-- timbre -->
+        {{#controls.3}}
+        <div class="mod-knob plaits-{{symbol}}" title="{{name}}">
+            <div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+        </div>
+        {{/controls.3}}
+        <!-- morph -->
+        {{#controls.4}}
+        <div class="mod-knob plaits-{{symbol}}" title="{{name}}">
+            <div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+        </div>
+        {{/controls.4}}
+    </div>
+    <div class="mod-control-group g4">
+        <!-- timbre mod -->
+        {{#controls.5}}
+        <div class="mod-knob plaits-{{symbol}}" title="{{name}}">
+            <div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+        </div>
+        {{/controls.5}}
+        <!-- freq mod -->
+        {{#controls.6}}
+        <div class="mod-knob plaits-{{symbol}}" title="{{name}}">
+            <div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+        </div>
+        {{/controls.6}}
+        <!-- morph mod -->
+        {{#controls.7}}
+        <div class="mod-knob plaits-{{symbol}}" title="{{name}}">
+            <div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+        </div>
+        {{/controls.7}}
+    </div>
+    <div class="mod-control-group g5">
+        <!-- lpg color -->
+        {{#controls.8}}
+        <div class="mod-knob plaits-{{symbol}}" title="{{name}}">
+            <div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+        </div>
+        {{/controls.8}}
+        <!-- lpg decay -->
+        {{#controls.9}}
+        <div class="mod-knob plaits-{{symbol}}" title="{{name}}">
+            <div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+        </div>
+        {{/controls.9}}
+    </div>
+    <div class="mod-switch" mod-role="bypass"></div>
+    <div class="mod-pedal-input">
+        <!-- engine -->
+        {{#effect.ports.cv.input.0}}
+        <div class="mod-input mod-input-disconnected plaits-{{symbol}}" title="{{name}}" mod-role="input-cv-port" mod-port-symbol="{{symbol}}">
+            <div class="mod-pedal-input-image"></div>
+        </div>
+        {{/effect.ports.cv.input.0}}
+
+        <!-- freq -->
+        {{#effect.ports.cv.input.2}}
+        <div class="mod-input mod-input-disconnected plaits-{{symbol}}" title="{{name}}" mod-role="input-cv-port" mod-port-symbol="{{symbol}}">
+            <div class="mod-pedal-input-image"></div>
+        </div>
+        {{/effect.ports.cv.input.2}}
+
+        <!-- harm -->
+        {{#effect.ports.cv.input.4}}
+        <div class="mod-input mod-input-disconnected plaits-{{symbol}}" title="{{name}}" mod-role="input-cv-port" mod-port-symbol="{{symbol}}">
+            <div class="mod-pedal-input-image"></div>
+        </div>
+        {{/effect.ports.cv.input.4}}
+
+        <!-- timbre -->
+        {{#effect.ports.cv.input.1}}
+        <div class="mod-input mod-input-disconnected plaits-{{symbol}}" title="{{name}}" mod-role="input-cv-port" mod-port-symbol="{{symbol}}">
+            <div class="mod-pedal-input-image"></div>
+        </div>
+        {{/effect.ports.cv.input.1}}
+
+        <!-- morph -->
+        {{#effect.ports.cv.input.3}}
+        <div class="mod-input mod-input-disconnected plaits-{{symbol}}" title="{{name}}" mod-role="input-cv-port" mod-port-symbol="{{symbol}}">
+            <div class="mod-pedal-input-image"></div>
+        </div>
+        {{/effect.ports.cv.input.3}}
+
+        <!-- trig -->
+        {{#effect.ports.cv.input.5}}
+        <div class="mod-input mod-input-disconnected plaits-{{symbol}}" title="{{name}}" mod-role="input-cv-port" mod-port-symbol="{{symbol}}">
+            <div class="mod-pedal-input-image"></div>
+        </div>
+        {{/effect.ports.cv.input.5}}
+
+        <!-- level -->
+        {{#effect.ports.cv.input.6}}
+        <div class="mod-input mod-input-disconnected plaits-{{symbol}}" title="{{name}}" mod-role="input-cv-port" mod-port-symbol="{{symbol}}">
+            <div class="mod-pedal-input-image"></div>
+        </div>
+        {{/effect.ports.cv.input.6}}
+
+        <!-- note -->
+        {{#effect.ports.cv.input.7}}
+        <div class="mod-input mod-input-disconnected plaits-{{symbol}}" title="{{name}}" mod-role="input-cv-port" mod-port-symbol="{{symbol}}">
+            <div class="mod-pedal-input-image"></div>
+        </div>
+        {{/effect.ports.cv.input.7}}
+    </div>
+    <div class="mod-pedal-output">
+        {{#effect.ports.audio.output}}
+        <div class="mod-output mod-output-disconnected plaits-{{symbol}}" title="{{name}}" mod-role="output-audio-port" mod-port-symbol="{{symbol}}">
+            <div class="mod-pedal-output-image"></div>
+        </div>
+        {{/effect.ports.audio.output}}
+    </div>
+</div>

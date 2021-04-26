@@ -16,14 +16,13 @@ polyclouds_VERSION?=$(shell git describe --tags HEAD 2>/dev/null | sed 's/-g.*$$
 
 LV2DIR ?= $(PREFIX)/lib/lv2
 LOADLIBES=-lm
-LV2NAME_CLOUDS=polyclouds
-LV2NAME_WARPS=polywarps
-LV2NAME_PLAITS=polyplaits
-LV2NAME_GRIDS=polygrids
-LV2NAME_MARBLES=polymarbles
-LV2NAME_RINGS=polyrings
-BUNDLE=polylenticular.lv2
-BUILDDIR=build/
+LV2NAME_CLOUDS=clouds
+LV2NAME_WARPS=warps
+LV2NAME_PLAITS=plaits
+LV2NAME_MARBLES=marbles
+LV2NAME_RINGS=rings
+BUNDLE=cth-mods.lv2
+BUILDDIR=build/$(BUNDLE)/
 targets=
 
 UNAME=$(shell uname)
@@ -52,7 +51,6 @@ endif
 targets+=$(BUILDDIR)$(LV2NAME_CLOUDS)$(LIB_EXT)
 targets+=$(BUILDDIR)$(LV2NAME_WARPS)$(LIB_EXT)
 targets+=$(BUILDDIR)$(LV2NAME_PLAITS)$(LIB_EXT)
-targets+=$(BUILDDIR)$(LV2NAME_GRIDS)$(LIB_EXT)
 targets+=$(BUILDDIR)$(LV2NAME_MARBLES)$(LIB_EXT)
 targets+=$(BUILDDIR)$(LV2NAME_RINGS)$(LIB_EXT)
 
@@ -86,14 +84,9 @@ WARPS_SOURCES = src/polywarps.cpp \
 	parasites/warps/resources.cc  \
 	parasites/stmlib/utils/random.cc \
 	parasites/stmlib/dsp/atan.cc \
-	parasites/stmlib/dsp/units.cc 
+	parasites/stmlib/dsp/units.cc
 
-GRIDS_SOURCES = src/polygrids.cpp \
-	src/Metronome.cpp  \
-	src/TopographPatternGenerator.cpp \
-	src/Oneshot.cpp
-
-MARBLES_SOURCES = src/polymarbles.cpp 
+MARBLES_SOURCES = src/polymarbles.cpp
 MARBLES_SOURCES += eurorack/stmlib/utils/random.cc
 MARBLES_SOURCES += eurorack/stmlib/dsp/atan.cc
 MARBLES_SOURCES += eurorack/stmlib/dsp/units.cc
@@ -105,7 +98,7 @@ MARBLES_SOURCES += eurorack/marbles/random/quantizer.cc
 MARBLES_SOURCES += eurorack/marbles/ramp/ramp_extractor.cc
 MARBLES_SOURCES += eurorack/marbles/resources.cc
 
-PLAITS_SOURCES = src/polyplaits.cpp 
+PLAITS_SOURCES = src/polyplaits.cpp
 PLAITS_SOURCES += $(wildcard eurorack/plaits/dsp/*.cc)
 PLAITS_SOURCES += $(wildcard eurorack/plaits/dsp/engine/*.cc)
 PLAITS_SOURCES += $(wildcard eurorack/plaits/dsp/speech/*.cc)
@@ -115,8 +108,7 @@ PLAITS_SOURCES += eurorack/stmlib/utils/random.cc
 PLAITS_SOURCES += eurorack/stmlib/dsp/atan.cc
 PLAITS_SOURCES += eurorack/stmlib/dsp/units.cc
 
-
-RINGS_SOURCES = src/polyrings.cpp 
+RINGS_SOURCES = src/polyrings.cpp
 RINGS_SOURCES += eurorack/rings/dsp/fm_voice.cc
 RINGS_SOURCES += eurorack/rings/dsp/part.cc
 RINGS_SOURCES += eurorack/rings/dsp/string_synth_part.cc
@@ -144,10 +136,26 @@ override CFLAGS += `$(PKG_CONFIG) --cflags lv2`
 # build target definitions
 default: all
 
-all: $(BUILDDIR)manifest.ttl $(BUILDDIR)$(LV2NAME_WARPS).ttl $(BUILDDIR)$(LV2NAME_CLOUDS).ttl $(BUILDDIR)$(LV2NAME_PLAITS).ttl $(BUILDDIR)$(LV2NAME_GRIDS).ttl $(BUILDDIR)$(LV2NAME_MARBLES).ttl $(BUILDDIR)$(LV2NAME_RINGS).ttl $(targets)
+all: $(BUILDDIR)manifest.ttl \
+	$(BUILDDIR)modgui \
+	$(BUILDDIR)$(LV2NAME_WARPS).ttl \
+	$(BUILDDIR)$(LV2NAME_CLOUDS).ttl \
+	$(BUILDDIR)$(LV2NAME_PLAITS).ttl \
+	$(BUILDDIR)$(LV2NAME_MARBLES).ttl \
+	$(BUILDDIR)$(LV2NAME_RINGS).ttl \
+	$(BUILDDIR)$(LV2NAME_WARPS)-gui.ttl \
+	$(BUILDDIR)$(LV2NAME_CLOUDS)-gui.ttl \
+	$(BUILDDIR)$(LV2NAME_PLAITS)-gui.ttl \
+	$(BUILDDIR)$(LV2NAME_MARBLES)-gui.ttl \
+	$(BUILDDIR)$(LV2NAME_RINGS)-gui.ttl \
+	$(targets)
 
 lv2syms:
 	echo "_lv2_descriptor" > lv2syms
+
+$(BUILDDIR)modgui: modgui
+	@mkdir -p $(BUILDDIR)
+	cp -r modgui $(BUILDDIR)modgui
 
 $(BUILDDIR)manifest.ttl: manifest.ttl
 	@mkdir -p $(BUILDDIR)
@@ -157,97 +165,130 @@ $(BUILDDIR)$(LV2NAME_CLOUDS).ttl: $(LV2NAME_CLOUDS).ttl
 	@mkdir -p $(BUILDDIR)
 	cat $(LV2NAME_CLOUDS).ttl > $(BUILDDIR)$(LV2NAME_CLOUDS).ttl
 
+$(BUILDDIR)$(LV2NAME_CLOUDS)-gui.ttl: $(LV2NAME_CLOUDS)-gui.ttl
+	@mkdir -p $(BUILDDIR)
+	cat $(LV2NAME_CLOUDS)-gui.ttl > $(BUILDDIR)$(LV2NAME_CLOUDS)-gui.ttl
+
 $(BUILDDIR)$(LV2NAME_WARPS).ttl: $(LV2NAME_WARPS).ttl
 	@mkdir -p $(BUILDDIR)
 	cat $(LV2NAME_WARPS).ttl > $(BUILDDIR)$(LV2NAME_WARPS).ttl
+
+$(BUILDDIR)$(LV2NAME_WARPS)-gui.ttl: $(LV2NAME_WARPS)-gui.ttl
+	@mkdir -p $(BUILDDIR)
+	cat $(LV2NAME_WARPS)-gui.ttl > $(BUILDDIR)$(LV2NAME_WARPS)-gui.ttl
 
 $(BUILDDIR)$(LV2NAME_PLAITS).ttl: $(LV2NAME_PLAITS).ttl
 	@mkdir -p $(BUILDDIR)
 	cat $(LV2NAME_PLAITS).ttl > $(BUILDDIR)$(LV2NAME_PLAITS).ttl
 
-$(BUILDDIR)$(LV2NAME_GRIDS).ttl: $(LV2NAME_GRIDS).ttl
+$(BUILDDIR)$(LV2NAME_PLAITS)-gui.ttl: $(LV2NAME_PLAITS)-gui.ttl
 	@mkdir -p $(BUILDDIR)
-	cat $(LV2NAME_GRIDS).ttl > $(BUILDDIR)$(LV2NAME_GRIDS).ttl
+	cat $(LV2NAME_PLAITS)-gui.ttl > $(BUILDDIR)$(LV2NAME_PLAITS)-gui.ttl
 
 $(BUILDDIR)$(LV2NAME_MARBLES).ttl: $(LV2NAME_MARBLES).ttl
 	@mkdir -p $(BUILDDIR)
 	cat $(LV2NAME_MARBLES).ttl > $(BUILDDIR)$(LV2NAME_MARBLES).ttl
 
+$(BUILDDIR)$(LV2NAME_MARBLES)-gui.ttl: $(LV2NAME_MARBLES)-gui.ttl
+	@mkdir -p $(BUILDDIR)
+	cat $(LV2NAME_MARBLES)-gui.ttl > $(BUILDDIR)$(LV2NAME_MARBLES)-gui.ttl
+
 $(BUILDDIR)$(LV2NAME_RINGS).ttl: $(LV2NAME_RINGS).ttl
 	@mkdir -p $(BUILDDIR)
 	cat $(LV2NAME_RINGS).ttl > $(BUILDDIR)$(LV2NAME_RINGS).ttl
 
-$(BUILDDIR)$(LV2NAME_CLOUDS)$(LIB_EXT): $(CLOUDS_SOURCES) 
+$(BUILDDIR)$(LV2NAME_RINGS)-gui.ttl: $(LV2NAME_RINGS)-gui.ttl
+	@mkdir -p $(BUILDDIR)
+	cat $(LV2NAME_RINGS)-gui.ttl > $(BUILDDIR)$(LV2NAME_RINGS)-gui.ttl
+
+$(BUILDDIR)$(LV2NAME_CLOUDS)$(LIB_EXT): $(CLOUDS_SOURCES)
 	@mkdir -p $(BUILDDIR)
 	$(CXX) $(CPPFLAGS) $(CFLAGS) $(FLAGS) \
 	  -o $(BUILDDIR)$(LV2NAME_CLOUDS)$(LIB_EXT) $(CLOUDS_SOURCES) \
 		-shared $(LV2LDFLAGS) $(LDFLAGS) $(LOADLIBES)
-	#$(STRIP) $(STRIPFLAGS) $(BUILDDIR)$(LV2NAME_CLOUDS)$(LIB_EXT)
 
-$(BUILDDIR)$(LV2NAME_WARPS)$(LIB_EXT): $(WARPS_SOURCES) 
+$(BUILDDIR)$(LV2NAME_WARPS)$(LIB_EXT): $(WARPS_SOURCES)
 	@mkdir -p $(BUILDDIR)
 	$(CXX) $(CPPFLAGS) $(CFLAGS) $(FLAGS) \
 	  -o $(BUILDDIR)$(LV2NAME_WARPS)$(LIB_EXT) $(WARPS_SOURCES) \
 		-shared $(LV2LDFLAGS) $(LDFLAGS) $(LOADLIBES)
 
-$(BUILDDIR)$(LV2NAME_PLAITS)$(LIB_EXT): $(PLAITS_SOURCES) 
+$(BUILDDIR)$(LV2NAME_PLAITS)$(LIB_EXT): $(PLAITS_SOURCES)
 	@mkdir -p $(BUILDDIR)
 	$(CXX) $(CPPFLAGS) $(CFLAGS) $(MUT_FLAGS) \
 	  -o $(BUILDDIR)$(LV2NAME_PLAITS)$(LIB_EXT) $(PLAITS_SOURCES) \
 		-shared $(LV2LDFLAGS) $(LDFLAGS) $(LOADLIBES)
 
-$(BUILDDIR)$(LV2NAME_GRIDS)$(LIB_EXT): $(GRIDS_SOURCES) 
-	@mkdir -p $(BUILDDIR)
-	$(CXX) $(CPPFLAGS) $(CFLAGS) \
-	  -o $(BUILDDIR)$(LV2NAME_GRIDS)$(LIB_EXT) $(GRIDS_SOURCES) \
-		-shared $(LV2LDFLAGS) $(LDFLAGS) $(LOADLIBES)
-
-$(BUILDDIR)$(LV2NAME_MARBLES)$(LIB_EXT): $(MARBLES_SOURCES) 
+$(BUILDDIR)$(LV2NAME_MARBLES)$(LIB_EXT): $(MARBLES_SOURCES)
 	@mkdir -p $(BUILDDIR)
 	$(CXX) $(CPPFLAGS) $(CFLAGS) $(MUT_FLAGS) -fPIC \
 	  -o $(BUILDDIR)$(LV2NAME_MARBLES)$(LIB_EXT) $(MARBLES_SOURCES) \
 		-shared $(LV2LDFLAGS) $(LDFLAGS) $(LOADLIBES)
 
-$(BUILDDIR)$(LV2NAME_RINGS)$(LIB_EXT): $(RINGS_SOURCES) 
+$(BUILDDIR)$(LV2NAME_RINGS)$(LIB_EXT): $(RINGS_SOURCES)
 	@mkdir -p $(BUILDDIR)
 	$(CXX) $(CPPFLAGS) $(CFLAGS) $(MUT_FLAGS) -fPIC \
 	  -o $(BUILDDIR)$(LV2NAME_RINGS)$(LIB_EXT) $(RINGS_SOURCES) \
 		-shared $(LV2LDFLAGS) $(LDFLAGS) $(LOADLIBES)
 
-# install/uninstall/clean target definitions
-
 install: all
 	install -d $(DESTDIR)$(LV2DIR)/$(BUNDLE)
+	install -d $(DESTDIR)$(LV2DIR)/$(BUNDLE)/modgui
+	install -d $(DESTDIR)$(LV2DIR)/$(BUNDLE)/modgui/cth_res
+	install -D modgui/cth_res/*.* $(DESTDIR)$(LV2DIR)/$(BUNDLE)/modgui/cth_res
+	install -D modgui/*.* $(DESTDIR)$(LV2DIR)/$(BUNDLE)/modgui
 	install -m755 $(BUILDDIR)$(LV2NAME_CLOUDS)$(LIB_EXT) $(DESTDIR)$(LV2DIR)/$(BUNDLE)
 	install -m755 $(BUILDDIR)$(LV2NAME_WARPS)$(LIB_EXT) $(DESTDIR)$(LV2DIR)/$(BUNDLE)
 	install -m755 $(BUILDDIR)$(LV2NAME_PLAITS)$(LIB_EXT) $(DESTDIR)$(LV2DIR)/$(BUNDLE)
-	install -m755 $(BUILDDIR)$(LV2NAME_GRIDS)$(LIB_EXT) $(DESTDIR)$(LV2DIR)/$(BUNDLE)
 	install -m755 $(BUILDDIR)$(LV2NAME_MARBLES)$(LIB_EXT) $(DESTDIR)$(LV2DIR)/$(BUNDLE)
 	install -m755 $(BUILDDIR)$(LV2NAME_RINGS)$(LIB_EXT) $(DESTDIR)$(LV2DIR)/$(BUNDLE)
-	install -m644 $(BUILDDIR)manifest.ttl $(BUILDDIR)$(LV2NAME_CLOUDS).ttl $(BUILDDIR)$(LV2NAME_WARPS).ttl $(BUILDDIR)$(LV2NAME_PLAITS).ttl $(BUILDDIR)$(LV2NAME_GRIDS).ttl $(BUILDDIR)$(LV2NAME_MARBLES).ttl $(BUILDDIR)$(LV2NAME_RINGS).ttl $(DESTDIR)$(LV2DIR)/$(BUNDLE)
+	install -m644 $(BUILDDIR)manifest.ttl \
+		$(BUILDDIR)$(LV2NAME_CLOUDS).ttl \
+		$(BUILDDIR)$(LV2NAME_WARPS).ttl \
+		$(BUILDDIR)$(LV2NAME_PLAITS).ttl \
+		$(BUILDDIR)$(LV2NAME_MARBLES).ttl \
+		$(BUILDDIR)$(LV2NAME_RINGS).ttl \
+		$(BUILDDIR)$(LV2NAME_CLOUDS)-gui.ttl \
+		$(BUILDDIR)$(LV2NAME_WARPS)-gui.ttl \
+		$(BUILDDIR)$(LV2NAME_PLAITS)-gui.ttl \
+		$(BUILDDIR)$(LV2NAME_MARBLES)-gui.ttl \
+		$(BUILDDIR)$(LV2NAME_RINGS)-gui.ttl \
+		$(DESTDIR)$(LV2DIR)/$(BUNDLE)
 
 uninstall:
-	rm -f $(DESTDIR)$(LV2DIR)/$(BUNDLE)/manifest.ttl
-	rm -f $(DESTDIR)$(LV2DIR)/$(BUNDLE)/$(LV2NAME_CLOUDS).ttl
-	rm -f $(DESTDIR)$(LV2DIR)/$(BUNDLE)/$(LV2NAME_CLOUDS)$(LIB_EXT)
-	rm -f $(DESTDIR)$(LV2DIR)/$(BUNDLE)/$(LV2NAME_WARPS).ttl
-	rm -f $(DESTDIR)$(LV2DIR)/$(BUNDLE)/$(LV2NAME_WARPS)$(LIB_EXT)
-	rm -f $(DESTDIR)$(LV2DIR)/$(BUNDLE)/$(LV2NAME_PLAITS).ttl
-	rm -f $(DESTDIR)$(LV2DIR)/$(BUNDLE)/$(LV2NAME_PLAITS)$(LIB_EXT)
-	rm -f $(DESTDIR)$(LV2DIR)/$(BUNDLE)/$(LV2NAME_GRIDS).ttl
-	rm -f $(DESTDIR)$(LV2DIR)/$(BUNDLE)/$(LV2NAME_GRIDS)$(LIB_EXT)
-	rm -f $(DESTDIR)$(LV2DIR)/$(BUNDLE)/$(LV2NAME_MARBLES).ttl
-	rm -f $(DESTDIR)$(LV2DIR)/$(BUNDLE)/$(LV2NAME_MARBLES)$(LIB_EXT)
-	rm -f $(DESTDIR)$(LV2DIR)/$(BUNDLE)/$(LV2NAME_RINGS).ttl
-	rm -f $(DESTDIR)$(LV2DIR)/$(BUNDLE)/$(LV2NAME_RINGS)$(LIB_EXT)
+	rm -rf $(DESTDIR)$(LV2DIR)/$(BUNDLE)/modgui
+	rm -f  $(DESTDIR)$(LV2DIR)/$(BUNDLE)/manifest.ttl
+	rm -f  $(DESTDIR)$(LV2DIR)/$(BUNDLE)/$(LV2NAME_CLOUDS).ttl
+	rm -f  $(DESTDIR)$(LV2DIR)/$(BUNDLE)/$(LV2NAME_CLOUDS)-gui.ttl
+	rm -f  $(DESTDIR)$(LV2DIR)/$(BUNDLE)/$(LV2NAME_CLOUDS)$(LIB_EXT)
+	rm -f  $(DESTDIR)$(LV2DIR)/$(BUNDLE)/$(LV2NAME_WARPS).ttl
+	rm -f  $(DESTDIR)$(LV2DIR)/$(BUNDLE)/$(LV2NAME_WARPS)-gui.ttl
+	rm -f  $(DESTDIR)$(LV2DIR)/$(BUNDLE)/$(LV2NAME_WARPS)$(LIB_EXT)
+	rm -f  $(DESTDIR)$(LV2DIR)/$(BUNDLE)/$(LV2NAME_PLAITS).ttl
+	rm -f  $(DESTDIR)$(LV2DIR)/$(BUNDLE)/$(LV2NAME_PLAITS)-gui.ttl
+	rm -f  $(DESTDIR)$(LV2DIR)/$(BUNDLE)/$(LV2NAME_PLAITS)$(LIB_EXT)
+	rm -f  $(DESTDIR)$(LV2DIR)/$(BUNDLE)/$(LV2NAME_MARBLES).ttl
+	rm -f  $(DESTDIR)$(LV2DIR)/$(BUNDLE)/$(LV2NAME_MARBLES)-gui.ttl
+	rm -f  $(DESTDIR)$(LV2DIR)/$(BUNDLE)/$(LV2NAME_MARBLES)$(LIB_EXT)
+	rm -f  $(DESTDIR)$(LV2DIR)/$(BUNDLE)/$(LV2NAME_RINGS).ttl
+	rm -f  $(DESTDIR)$(LV2DIR)/$(BUNDLE)/$(LV2NAME_RINGS)-gui.ttl
+	rm -f  $(DESTDIR)$(LV2DIR)/$(BUNDLE)/$(LV2NAME_RINGS)$(LIB_EXT)
 	-rmdir $(DESTDIR)$(LV2DIR)/$(BUNDLE)
 
-$(LV2NAME_CLOUDS)debug : clean $(RES_OBJECTS)
-	$(CXX) $(DEBUGFLAGS) $(OBJECTS) $(LDFLAGS) -o $(NAME).so
-	$(CC) $(DEBUGFLAGS) -Wl,-z,nodelete $(GUI_OBJECTS) $(RES_OBJECTS) $(GUI_LDFLAGS) -o $(NAME)_ui.so
-
 clean:
-	rm -f $(BUILDDIR)manifest.ttl $(BUILDDIR)$(LV2NAME_CLOUDS).ttl $(BUILDDIR)$(LV2NAME_CLOUDS)$(LIB_EXT) lv2syms
-	-test -d $(BUILDDIR) && rmdir $(BUILDDIR) || true
+	rm -f lv2syms
+	rm -rf $(BUILDDIR)modgui
+	rm -f  $(BUILDDIR)manifest.ttl
+	rm -f  $(BUILDDIR)$(LV2NAME_CLOUDS).ttl $(BUILDDIR)$(LV2NAME_CLOUDS)$(LIB_EXT)
+	rm -f  $(BUILDDIR)$(LV2NAME_WARPS).ttl $(BUILDDIR)$(LV2NAME_WARPS)$(LIB_EXT)
+	rm -f  $(BUILDDIR)$(LV2NAME_MARBLES).ttl $(BUILDDIR)$(LV2NAME_MARBLES)$(LIB_EXT)
+	rm -f  $(BUILDDIR)$(LV2NAME_PLAITS).ttl $(BUILDDIR)$(LV2NAME_PLAITS)$(LIB_EXT)
+	rm -f  $(BUILDDIR)$(LV2NAME_RINGS).ttl $(BUILDDIR)$(LV2NAME_RINGS)$(LIB_EXT)
+	rm -f  $(BUILDDIR)$(LV2NAME_CLOUDS)-gui.ttl
+	rm -f  $(BUILDDIR)$(LV2NAME_WARPS)-gui.ttl
+	rm -f  $(BUILDDIR)$(LV2NAME_MARBLES)-gui.ttl
+	rm -f  $(BUILDDIR)$(LV2NAME_PLAITS)-gui.ttl
+	rm -f  $(BUILDDIR)$(LV2NAME_RINGS)-gui.ttl
+	-test -d $(BUILDDIR) && rmdir -p $(BUILDDIR) || true
 
 .PHONY: clean all install uninstall

@@ -1,0 +1,74 @@
+@prefix modgui: <http://moddevices.com/ns/modgui#> .
+@prefix lv2:    <http://lv2plug.in/ns/lv2core#> .
+
+<http://polyeffects.com/lv2/polymarbles>
+    modgui:gui [
+        modgui:resourcesDirectory <modgui> ;
+        modgui:iconTemplate <modgui/icon-marbles.html> ;
+        modgui:stylesheet <modgui/stylesheet-marbles.css> ;
+        modgui:screenshot <modgui/screenshot-marbles.png> ;
+        modgui:thumbnail <modgui/thumbnail-marbles.png> ;
+        modgui:brand "Poly" ;
+        modgui:label "Marbles" ;
+        modgui:port [
+            lv2:index 0 ;
+            lv2:symbol "t_deja_vu_param" ;
+            lv2:name "T Deja Vu" ;
+        ] , [
+            lv2:index 1 ;
+            lv2:symbol "x_deja_vu_param" ;
+            lv2:name "X Deja Vu" ;
+        ] , [
+            lv2:index 2 ;
+            lv2:symbol "deja_vu_param" ;
+            lv2:name "Deja Vu Probablity" ;
+        ] , [
+            lv2:index 3 ;
+            lv2:symbol "t_rate_param" ;
+            lv2:name "T Clock Tempo" ;
+        ] , [
+            lv2:index 4 ;
+            lv2:symbol "x_spread_param" ;
+            lv2:name "X Spread" ;
+        ] , [
+            lv2:index 5 ;
+            lv2:symbol "t_mode_param" ;
+            lv2:name "T Mode" ;
+        ] , [
+            lv2:index 6 ;
+            lv2:symbol "x_mode_param" ;
+            lv2:name "X Mode" ;
+        ] , [
+            lv2:index 7 ;
+            lv2:symbol "deja_vu_length_param" ;
+            lv2:name "Deja Vu Length" ;
+        ] , [
+            lv2:index 8 ;
+            lv2:symbol "t_bias_param" ;
+            lv2:name "T Gate Bias" ;
+        ] , [
+            lv2:index 9 ;
+            lv2:symbol "x_bias_param" ;
+            lv2:name "X Distribution Bias" ;
+        ] , [
+            lv2:index 10 ;
+            lv2:symbol "t_range_param" ;
+            lv2:name "T Range" ;
+        ] , [
+            lv2:index 11 ;
+            lv2:symbol "x_range_param" ;
+            lv2:name "X Range" ;
+        ] , [
+            lv2:index 12 ;
+            lv2:symbol "external_param" ;
+            lv2:name "External" ;
+        ] , [
+            lv2:index 13 ;
+            lv2:symbol "t_jitter_param" ;
+            lv2:name "T Jitter" ;
+        ] , [
+            lv2:index 14 ;
+            lv2:symbol "x_steps_param" ;
+            lv2:name "X Smoothness Steps" ;
+        ] ;
+    ] .

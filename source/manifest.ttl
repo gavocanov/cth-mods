@@ -1,0 +1,122 @@
+@prefix lv2:    <http://lv2plug.in/ns/lv2core#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix mod:    <http://moddevices.com/ns/mod#> .
+@prefix warps:  <http://polyeffects.com/lv2/polywarps#> .
+@prefix clouds: <http://polyeffects.com/lv2/polyclouds#> .
+
+clouds:resonestor
+	a lv2:Plugin, lv2:ModulatorPlugin, mod:ControlVoltagePlugin ;
+	lv2:binary <clouds.so> ;
+	rdfs:seeAlso <clouds.ttl> .
+
+clouds:oliverb
+	a lv2:Plugin, lv2:ReverbPlugin, mod:ControlVoltagePlugin ;
+	lv2:binary <clouds.so> ;
+	rdfs:seeAlso <clouds.ttl> .
+
+clouds:spectral
+	a lv2:Plugin, lv2:SpectralPlugin, mod:ControlVoltagePlugin ;
+	lv2:binary <clouds.so> ;
+	rdfs:seeAlso <clouds.ttl> .
+
+clouds:looping_delay
+	a lv2:Plugin, lv2:DelayPlugin, mod:ControlVoltagePlugin ;
+	lv2:binary <clouds.so> ;
+	rdfs:seeAlso <clouds.ttl> .
+
+clouds:stretch
+	a lv2:Plugin, lv2:DelayPlugin, mod:ControlVoltagePlugin ;
+	lv2:binary <clouds.so> ;
+	rdfs:seeAlso <clouds.ttl> .
+
+clouds:granular
+	a lv2:Plugin, lv2:DelayPlugin, mod:ControlVoltagePlugin ;
+	lv2:binary <clouds.so> ;
+	rdfs:seeAlso <clouds.ttl> .
+
+clouds:beat_repeat
+	a lv2:Plugin, lv2:DelayPlugin, mod:ControlVoltagePlugin ;
+	lv2:binary <clouds.so> ;
+	rdfs:seeAlso <clouds.ttl> .
+
+warps:doppler
+	a lv2:Plugin, lv2:DelayPlugin, mod:ControlVoltagePlugin ;
+	lv2:binary <warps.so> ;
+	rdfs:seeAlso <warps.ttl> .
+
+warps:fold
+	a lv2:Plugin,lv2:ModulatorPlugin, mod:ControlVoltagePlugin ;
+	lv2:binary <warps.so> ;
+	rdfs:seeAlso <warps.ttl> .
+
+warps:chebyschev
+	a lv2:Plugin, lv2:DistortionPlugin, mod:ControlVoltagePlugin ;
+	lv2:binary <warps.so> ;
+	rdfs:seeAlso <warps.ttl> .
+
+warps:frequency_shifter
+	a lv2:Plugin, lv2:ModulatorPlugin, mod:ControlVoltagePlugin ;
+	lv2:binary <warps.so> ;
+	rdfs:seeAlso <warps.ttl> .
+
+warps:bitcrusher
+	a lv2:Plugin, lv2:DistortionPlugin, mod:ControlVoltagePlugin ;
+	lv2:binary <warps.so> ;
+	rdfs:seeAlso <warps.ttl> .
+
+warps:comparator
+	a lv2:Plugin, lv2:ModulatorPlugin, mod:ControlVoltagePlugin ;
+	lv2:binary <warps.so> ;
+	rdfs:seeAlso <warps.ttl> .
+
+warps:vocoder
+	a lv2:Plugin, lv2:ModulatorPlugin, mod:ControlVoltagePlugin ;
+	lv2:binary <warps.so> ;
+	rdfs:seeAlso <warps.ttl> .
+
+warps:delay
+	a lv2:Plugin, lv2:DelayPlugin, mod:ControlVoltagePlugin ;
+	lv2:binary <warps.so> ;
+	rdfs:seeAlso <warps.ttl> .
+
+warps:meta
+	a lv2:Plugin, lv2:ModulatorPlugin, mod:ControlVoltagePlugin ;
+	lv2:binary <warps.so> ;
+	rdfs:seeAlso <warps.ttl> .
+
+<http://polyeffects.com/lv2/polyplaits>
+	a lv2:Plugin, lv2:InstrumentPlugin, mod:ControlVoltagePlugin ;
+	lv2:binary <plaits.so> ;
+	rdfs:seeAlso <plaits.ttl> .
+
+<http://polyeffects.com/lv2/polymarbles>
+	a lv2:Plugin, lv2:GeneratorPlugin, mod:ControlVoltagePlugin ;
+	lv2:binary <marbles.so> ;
+	rdfs:seeAlso <marbles.ttl> .
+
+<http://polyeffects.com/lv2/polyrings>
+	a lv2:Plugin, lv2:InstrumentPlugin, mod:ControlVoltagePlugin ;
+	lv2:binary <rings.so> ;
+	rdfs:seeAlso <rings.ttl> .
+
+<http://polyeffects.com/lv2/polyplaits>  rdfs:seeAlso <plaits-gui.ttl> .
+<http://polyeffects.com/lv2/polyrings>   rdfs:seeAlso <rings-gui.ttl> .
+<http://polyeffects.com/lv2/polymarbles> rdfs:seeAlso <marbles-gui.ttl> .
+
+<http://polyeffects.com/lv2/polyclouds#beat_repeat>   rdfs:seeAlso <clouds-gui.ttl> .
+<http://polyeffects.com/lv2/polyclouds#resonestor>    rdfs:seeAlso <clouds-gui.ttl> .
+<http://polyeffects.com/lv2/polyclouds#oliverb>       rdfs:seeAlso <clouds-gui.ttl> .
+<http://polyeffects.com/lv2/polyclouds#spectral>      rdfs:seeAlso <clouds-gui.ttl> .
+<http://polyeffects.com/lv2/polyclouds#looping_delay> rdfs:seeAlso <clouds-gui.ttl> .
+<http://polyeffects.com/lv2/polyclouds#stretch>       rdfs:seeAlso <clouds-gui.ttl> .
+<http://polyeffects.com/lv2/polyclouds#granular>      rdfs:seeAlso <clouds-gui.ttl> .
+
+<http://polyeffects.com/lv2/polywarps#bitcrusher>        rdfs:seeAlso <warps-gui.ttl> .
+<http://polyeffects.com/lv2/polywarps#doppler>           rdfs:seeAlso <warps-gui.ttl> .
+<http://polyeffects.com/lv2/polywarps#fold>              rdfs:seeAlso <warps-gui.ttl> .
+<http://polyeffects.com/lv2/polywarps#chebyschev>        rdfs:seeAlso <warps-gui.ttl> .
+<http://polyeffects.com/lv2/polywarps#frequency_shifter> rdfs:seeAlso <warps-gui.ttl> .
+<http://polyeffects.com/lv2/polywarps#comparator>        rdfs:seeAlso <warps-gui.ttl> .
+<http://polyeffects.com/lv2/polywarps#vocoder>           rdfs:seeAlso <warps-gui.ttl> .
+<http://polyeffects.com/lv2/polywarps#delay>             rdfs:seeAlso <warps-gui.ttl> .
+<http://polyeffects.com/lv2/polywarps#meta>              rdfs:seeAlso <warps-gui.ttl> .

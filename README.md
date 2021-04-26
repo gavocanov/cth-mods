@@ -1,13 +1,2 @@
-polyfoot.lv2
-==============
+fork of polyeffects/lenticular_lv2 to work on modduo/modduox devices
 
-
-Install
--------
-
-Compiling the plugins requires LV2 SDK, gnu-make and a c-compiler.
-
-```bash
-  make
-  sudo make install PREFIX=/usr
-```

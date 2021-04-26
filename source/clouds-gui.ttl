@@ -1,0 +1,62 @@
+@prefix modgui: <http://moddevices.com/ns/modgui#> .
+@prefix lv2:    <http://lv2plug.in/ns/lv2core#> .
+
+<http://polyeffects.com/lv2/polyclouds#beat_repeat>
+    modgui:gui [
+        modgui:resourcesDirectory <modgui> ;
+        modgui:iconTemplate <modgui/icon-clouds.html> ;
+        modgui:stylesheet <modgui/stylesheet-clouds.css> ;
+        modgui:screenshot <modgui/screenshot-clouds.png> ;
+        modgui:thumbnail <modgui/thumbnail-clouds.png> ;
+        modgui:brand "Poly" ;
+        modgui:label "Clouds" ;
+        modgui:port [
+            lv2:index 0 ;
+            lv2:symbol "position_param" ;
+            lv2:name "Loop Start" ;
+        ] , [
+            lv2:index 1 ;
+            lv2:symbol "size_param" ;
+            lv2:name "Loop Size" ;
+        ] , [
+            lv2:index 2 ;
+            lv2:symbol "pitch_param" ;
+            lv2:name "Pitch" ;
+        ] , [
+            lv2:index 3 ;
+            lv2:symbol "in_gain_param" ;
+            lv2:name "Gain" ;
+        ] , [
+            lv2:index 4 ;
+            lv2:symbol "density_param" ;
+            lv2:name "Size Mod" ;
+        ] , [
+            lv2:index 5 ;
+            lv2:symbol "texture_param" ;
+            lv2:name "Slice Step" ;
+        ] , [
+            lv2:index 6 ;
+            lv2:symbol "blend_param" ;
+            lv2:name "Slice Probability" ;
+        ] , [
+            lv2:index 7 ;
+            lv2:symbol "spread_param" ;
+            lv2:name "Clock Divider" ;
+        ] , [
+            lv2:index 8 ;
+            lv2:symbol "feedback_param" ;
+            lv2:name "Pitch Mod" ;
+        ] , [
+            lv2:index 9 ;
+            lv2:symbol "reverb_param" ;
+            lv2:name "Feedback" ;
+        ] , [
+            lv2:index 10 ;
+            lv2:symbol "freeze_param" ;
+            lv2:name "freeze" ;
+        ] , [
+            lv2:index 11 ;
+            lv2:symbol "reverse_param" ;
+            lv2:name "reverse" ;
+        ] ;
+    ] .

@@ -1,0 +1,158 @@
+/* = CONTAINER
+================================================ */
+.plaits{{{cns}}} {
+    background-image: url(/resources/cth_res/plaits_bg4.png{{{ns}}});
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 359px 758px;
+    height: 758px;
+    position: absolute;
+    width: 359px;
+}
+
+/* PORTS
+================================================ */
+.plaits{{{cns}}} .mod-pedal-input {
+    top: 54px;
+}
+
+.plaits{{{cns}}} .mod-pedal-input .mod-cv-input {
+    margin-bottom: 1px;
+}
+
+.plaits{{{cns}}} .mod-input.mod-input-disconnected.plaits-freq_cv.mod-cv-input {
+    margin-top: 10px;
+}
+
+.plaits{{{cns}}} .mod-input.mod-input-disconnected.plaits-timbre_cv.mod-cv-input {
+    margin-top: 43px;
+}
+
+.plaits{{{cns}}} .mod-input.mod-input-disconnected.plaits-trigger_cv.mod-cv-input {
+    margin-top: 135px;
+}
+
+.plaits{{{cns}}} .mod-pedal-output {
+    top: 590px;
+}
+
+.plaits{{{cns}}} .mod-pedal-output .mod-audio-output {
+    margin-bottom: 1px;
+}
+
+/* = LIGHT ON/OFF
+================================================ */
+.plaits{{{cns}}} .mod-light {
+    background-image: url(/resources/cth_res/lights.png{{{ns}}}) !important;
+    background-position: right center;
+    background-repeat: no-repeat;
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    top: 640px;
+    left: 200px;
+}
+
+.plaits{{{cns}}} .mod-light.off {
+  background-position: right center;
+}
+
+.plaits{{{cns}}} .mod-light.on {
+  background-position: left center;
+}
+
+/* = SWITCH
+================================================ */
+.plaits{{{cns}}} .mod-switch {
+    background-image: url(/resources/cth_res/switch_key.png{{{ns}}});
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: auto 28px 38.5px;
+    cursor: pointer;
+    height: 38.5px;
+    width: 28px;
+    margin: auto;
+    position: absolute;
+    z-index: 30;
+    top: 626px;
+    left: 167px;
+}
+
+.plaits{{{cns}}} .mod-switch.on {
+  background-position: center top;
+  top: 637px;
+}
+
+.plaits{{{cns}}} .mod-switch.off {
+  background-position: center bottom;
+}
+
+/* = KNOBS
+================================================ */
+.plaits{{{cns}}} .mod-control-group {
+    position: relative;
+    display: inline-block;
+    width: 359px;
+    height: 53px;
+    z-index: 30;
+}
+
+.plaits{{{cns}}} .mod-control-group .mod-knob {
+    display: inline-block;
+}
+
+.plaits{{{cns}}} .mod-control-group .mod-knob .mod-knob-image {
+    background-image: url(/resources/cth_res/medium_knob_3_70frames.png{{{ns}}});
+    background-repeat: no-repeat;
+    background-size: auto 53px;
+    display: inline-block;
+    height: 53px;
+    width: 53px;
+}
+
+/* KNOB GROUPS */
+.plaits{{{cns}}} .mod-control-group.g1 {
+    margin-top: 65px;
+    margin-left: 150px;
+}
+
+.plaits{{{cns}}} .mod-control-group.g2 {
+    margin-top: 25px;
+    margin-left: 46px;
+}
+
+.plaits{{{cns}}} .mod-control-group.g2 .mod-knob.plaits-harmonics {
+    margin-left: 156px;
+}
+
+.plaits{{{cns}}} .mod-control-group.g3 {
+    margin-top: 97px;
+    margin-left: 38px;
+}
+
+.plaits{{{cns}}} .mod-control-group.g3 .mod-knob.plaits-morph {
+    margin-left: 170px;
+}
+
+.plaits{{{cns}}} .mod-control-group.g4 {
+    margin-top: 90px;
+    margin-left: 38px;
+}
+
+.plaits{{{cns}}} .mod-control-group.g4 .mod-knob.plaits-freq_mod {
+    margin-left: 58px;
+}
+
+.plaits{{{cns}}} .mod-control-group.g4 .mod-knob.plaits-morph_mod {
+    margin-left: 58px;
+}
+
+.plaits{{{cns}}} .mod-control-group.g5 {
+    margin-top: 36px;
+    margin-left: 152px;
+}
+
+.plaits{{{cns}}} .mod-control-group.g5 .mod-knob.plaits-lpg_decay {
+    margin-left: 58px;
+}
+
