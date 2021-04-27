@@ -1,0 +1,157 @@
+<div class="mod-pedal rings{{{cns}}}">
+    <div mod-role="drag-handle" class="mod-drag-handle"></div>
+    <div class="mod-light on" mod-role="bypass-light"></div>
+    <div class="mod-control-group g1">
+        <!-- poly -->
+        {{#controls.0}}
+        <div class="mod-knob rings-{{symbol}}" title="{{name}}">
+            <div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+        </div>
+        {{/controls.0}}
+        <!-- reso -->
+        {{#controls.1}}
+        <div class="mod-knob rings-{{symbol}}" title="{{name}}">
+            <div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+        </div>
+        {{/controls.1}}
+    </div>
+    <div class="mod-control-group g2">
+        <!-- freq -->
+        {{#controls.2}}
+        <div class="mod-knob rings-{{symbol}}" title="{{name}}">
+            <div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+        </div>
+        {{/controls.2}}
+        <!-- struct -->
+        {{#controls.3}}
+        <div class="mod-knob rings-{{symbol}}" title="{{name}}">
+            <div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+        </div>
+        {{/controls.3}}
+    </div>
+    <div class="mod-control-group g3">
+        <!-- bright -->
+        {{#controls.4}}
+        <div class="mod-knob rings-{{symbol}}" title="{{name}}">
+            <div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+        </div>
+        {{/controls.4}}
+        <!-- damp -->
+        {{#controls.5}}
+        <div class="mod-knob rings-{{symbol}}" title="{{name}}">
+            <div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+        </div>
+        {{/controls.5}}
+        <!-- pos -->
+        {{#controls.6}}
+        <div class="mod-knob rings-{{symbol}}" title="{{name}}">
+            <div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+        </div>
+        {{/controls.6}}
+    </div>
+    <div class="mod-control-group g4">
+        <!-- bright-mod -->
+        {{#controls.7}}
+        <div class="mod-knob rings-{{symbol}}" title="{{name}}">
+            <div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+        </div>
+        {{/controls.7}}
+        <!-- freq-mod -->
+        {{#controls.8}}
+        <div class="mod-knob rings-{{symbol}}" title="{{name}}">
+            <div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+        </div>
+        {{/controls.8}}
+        <!-- damp-mod -->
+        {{#controls.9}}
+        <div class="mod-knob rings-{{symbol}}" title="{{name}}">
+            <div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+        </div>
+        {{/controls.9}}
+        <!-- struct-mod -->
+        {{#controls.10}}
+        <div class="mod-knob rings-{{symbol}}" title="{{name}}">
+            <div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+        </div>
+        {{/controls.10}}
+        <!-- pos-mod -->
+        {{#controls.11}}
+        <div class="mod-knob rings-{{symbol}}" title="{{name}}">
+            <div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+        </div>
+        {{/controls.11}}
+    </div>
+    <div class="mod-control-group g5">
+        <!-- excite -->
+        {{#controls.12}}
+        <div class="mod-knob rings-{{symbol}}" title="{{name}}">
+            <div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+        </div>
+        {{/controls.12}}
+    </div>
+    <div class="mod-switch" mod-role="bypass"></div>
+    <div class="mod-pedal-input">
+        <!-- freq -->
+        {{#effect.ports.cv.input.1}}
+        <div class="mod-input mod-input-disconnected rings-{{symbol}}" title="{{name}}" mod-role="input-cv-port" mod-port-symbol="{{symbol}}">
+            <div class="mod-pedal-input-image"></div>
+        </div>
+        {{/effect.ports.cv.input.1}}
+
+        <!-- struct -->
+        {{#effect.ports.cv.input.3}}
+        <div class="mod-input mod-input-disconnected rings-{{symbol}}" title="{{name}}" mod-role="input-cv-port" mod-port-symbol="{{symbol}}">
+            <div class="mod-pedal-input-image"></div>
+        </div>
+        {{/effect.ports.cv.input.3}}
+
+        <!-- bright -->
+        {{#effect.ports.cv.input.0}}
+        <div class="mod-input mod-input-disconnected rings-{{symbol}}" title="{{name}}" mod-role="input-cv-port" mod-port-symbol="{{symbol}}">
+            <div class="mod-pedal-input-image"></div>
+        </div>
+        {{/effect.ports.cv.input.0}}
+
+        <!-- damp -->
+        {{#effect.ports.cv.input.2}}
+        <div class="mod-input mod-input-disconnected rings-{{symbol}}" title="{{name}}" mod-role="input-cv-port" mod-port-symbol="{{symbol}}">
+            <div class="mod-pedal-input-image"></div>
+        </div>
+        {{/effect.ports.cv.input.2}}
+
+        <!-- pos -->
+        {{#effect.ports.cv.input.4}}
+        <div class="mod-input mod-input-disconnected rings-{{symbol}}" title="{{name}}" mod-role="input-cv-port" mod-port-symbol="{{symbol}}">
+            <div class="mod-pedal-input-image"></div>
+        </div>
+        {{/effect.ports.cv.input.4}}
+
+        <!-- strum -->
+        {{#effect.ports.cv.input.5}}
+        <div class="mod-input mod-input-disconnected rings-{{symbol}}" title="{{name}}" mod-role="input-cv-port" mod-port-symbol="{{symbol}}">
+            <div class="mod-pedal-input-image"></div>
+        </div>
+        {{/effect.ports.cv.input.5}}
+
+        <!-- pitch -->
+        {{#effect.ports.cv.input.6}}
+        <div class="mod-input mod-input-disconnected rings-{{symbol}}" title="{{name}}" mod-role="input-cv-port" mod-port-symbol="{{symbol}}">
+            <div class="mod-pedal-input-image"></div>
+        </div>
+        {{/effect.ports.cv.input.6}}
+
+        <!-- audio -->
+        {{#effect.ports.audio.input}}
+        <div class="mod-input mod-input-disconnected rings-{{symbol}}" title="{{name}}" mod-role="input-audio-port" mod-port-symbol="{{symbol}}">
+            <div class="mod-pedal-input-image"></div>
+        </div>
+        {{/effect.ports.audio.input}}
+    </div>
+    <div class="mod-pedal-output">
+        {{#effect.ports.audio.output}}
+        <div class="mod-output mod-output-disconnected rings-{{symbol}}" title="{{name}}" mod-role="output-audio-port" mod-port-symbol="{{symbol}}">
+            <div class="mod-pedal-output-image"></div>
+        </div>
+        {{/effect.ports.audio.output}}
+    </div>
+</div>
