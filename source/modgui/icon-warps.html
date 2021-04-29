@@ -3,6 +3,14 @@
     <div class=mod-plugin-brand><h1>{{brand}}</h1></div>
     <div class=mod-plugin-name><h1>{{label}}</h1></div>
     <div class="mod-light on" mod-role="bypass-light"></div>
+    <div class="mod-control-group g0">
+        <!-- mode -->
+        {{#controls.0}}
+        <div class="mod-knob warps-{{name}}" title="{{symbol}}">
+            <div class="mod-knob-image-big" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+        </div>
+        {{/controls.0}}
+    </div>
     <div class="mod-control-group g1">
         <!-- shape -->
         {{#controls.2}}

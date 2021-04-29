@@ -141,9 +141,21 @@
     width: 53px;
 }
 
+.warps{{{cns}}} .mod-control-group .mod-knob .mod-knob-image-big {
+    background-image: url(/resources/cth_res/big_knob_3_70frames.png{{{ns}}});
+    height: 83px;
+    width: 83px;
+    margin: 0 22px;
+}
+
 /* KNOB GROUPS */
+.warps{{{cns}}} .mod-control-group.g0 {
+    margin-top: 210px;
+    margin-left: 85px;
+}
+
 .warps{{{cns}}} .mod-control-group.g1 {
-    margin-top: 333px;
+    margin-top: 35px;
     margin-left: 26px;
 }
 

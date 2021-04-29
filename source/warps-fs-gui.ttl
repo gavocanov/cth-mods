@@ -9,7 +9,7 @@
         modgui:screenshot <modgui/screenshot-warps.png> ;
         modgui:thumbnail <modgui/thumbnail-warps.png> ;
         modgui:brand "Warps" ;
-        modgui:label "Freq shifter" ;
+        modgui:label "Frequency Shifter" ;
         modgui:port [
             lv2:index 0 ;
             lv2:symbol "frequency_shift" ;
