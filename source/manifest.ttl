@@ -111,12 +111,12 @@ warps:meta
 <http://polyeffects.com/lv2/polyclouds#stretch>       rdfs:seeAlso <clouds-gui.ttl> .
 <http://polyeffects.com/lv2/polyclouds#granular>      rdfs:seeAlso <clouds-gui.ttl> .
 
-<http://polyeffects.com/lv2/polywarps#bitcrusher>        rdfs:seeAlso <warps-gui.ttl> .
-<http://polyeffects.com/lv2/polywarps#doppler>           rdfs:seeAlso <warps-gui.ttl> .
-<http://polyeffects.com/lv2/polywarps#fold>              rdfs:seeAlso <warps-gui.ttl> .
-<http://polyeffects.com/lv2/polywarps#chebyschev>        rdfs:seeAlso <warps-gui.ttl> .
-<http://polyeffects.com/lv2/polywarps#frequency_shifter> rdfs:seeAlso <warps-gui.ttl> .
-<http://polyeffects.com/lv2/polywarps#comparator>        rdfs:seeAlso <warps-gui.ttl> .
-<http://polyeffects.com/lv2/polywarps#vocoder>           rdfs:seeAlso <warps-gui.ttl> .
-<http://polyeffects.com/lv2/polywarps#delay>             rdfs:seeAlso <warps-gui.ttl> .
-<http://polyeffects.com/lv2/polywarps#meta>              rdfs:seeAlso <warps-gui.ttl> .
+<http://polyeffects.com/lv2/polywarps#bitcrusher>        rdfs:seeAlso <warps-bc-gui.ttl> .
+<http://polyeffects.com/lv2/polywarps#doppler>           rdfs:seeAlso <warps-do-gui.ttl> .
+<http://polyeffects.com/lv2/polywarps#fold>              rdfs:seeAlso <warps-fo-gui.ttl> .
+<http://polyeffects.com/lv2/polywarps#chebyschev>        rdfs:seeAlso <warps-ch-gui.ttl> .
+<http://polyeffects.com/lv2/polywarps#frequency_shifter> rdfs:seeAlso <warps-fs-gui.ttl> .
+<http://polyeffects.com/lv2/polywarps#comparator>        rdfs:seeAlso <warps-cp-gui.ttl> .
+<http://polyeffects.com/lv2/polywarps#vocoder>           rdfs:seeAlso <warps-vo-gui.ttl> .
+<http://polyeffects.com/lv2/polywarps#delay>             rdfs:seeAlso <warps-dl-gui.ttl> .
+<http://polyeffects.com/lv2/polywarps#meta>              rdfs:seeAlso <warps-mt-gui.ttl> .

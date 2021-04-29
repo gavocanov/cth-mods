@@ -8,7 +8,7 @@
         modgui:stylesheet <modgui/stylesheet-marbles.css> ;
         modgui:screenshot <modgui/screenshot-marbles.png> ;
         modgui:thumbnail <modgui/thumbnail-marbles.png> ;
-        modgui:brand "Poly" ;
+        modgui:brand "cTh-mods" ;
         modgui:label "Marbles" ;
         modgui:port [
             lv2:index 0 ;

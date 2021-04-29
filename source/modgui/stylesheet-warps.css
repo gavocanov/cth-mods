@@ -1,0 +1,162 @@
+/* = CONTAINER
+================================================ */
+.warps{{{cns}}} {
+    background-image: url(/resources/cth_res/warps_bg2.png{{{ns}}});
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 299px 563px;
+    height: 563px;
+    position: absolute;
+    width: 299px;
+}
+
+/* = PLUGIN'S AUTHOR
+================================================ */
+.warps{{{cns}}} .mod-plugin-brand {
+    left:0;
+    position:absolute;
+    right:0;
+    text-align:center;
+    text-transform:uppercase;
+    top:64px;
+}
+
+.warps{{{cns}}} .mod-plugin-brand h1 {
+    border-color:#000;
+    border-radius:12px;
+    border-style:solid;
+    border-width:4px;
+    display:inline-block;
+    font-family:"Nexa";
+    font-size:32px;
+    padding:3px 9px 0;
+}
+
+/* = PLUGIN'S NAME
+================================================ */
+.warps{{{cns}}} .mod-plugin-name {
+    left:30px;
+    overflow:hidden;
+    position:absolute;
+    right:30px;
+    text-align:center;
+    top:170px;
+}
+
+.warps{{{cns}}} .mod-plugin-name h1 {
+    font-family:"Questrial";
+    font-size:21px;
+    line-height:1;
+}
+
+/* PORTS
+================================================ */
+.warps{{{cns}}} .mod-pedal-input {
+    top: 154px;
+}
+
+.warps{{{cns}}} .mod-pedal-input .mod-cv-input {
+    margin-bottom: 1px;
+}
+
+.warps{{{cns}}} .mod-pedal-input .mod-audio-input {
+    margin-bottom: 1px;
+}
+
+.warps{{{cns}}} .mod-pedal-output {
+    top: 380px;
+}
+
+.warps{{{cns}}} .mod-pedal-output .mod-audio-output {
+    margin-bottom: 1px;
+}
+
+/* = LIGHT ON/OFF
+================================================ */
+.warps{{{cns}}} .mod-light {
+    background-image: url(/resources/cth_res/lights.png{{{ns}}}) !important;
+    background-position: right center;
+    background-repeat: no-repeat;
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    top: 140px;
+    left: 150px;
+}
+
+.warps{{{cns}}} .mod-light.off {
+  background-position: right center;
+}
+
+.warps{{{cns}}} .mod-light.on {
+  background-position: left center;
+}
+
+/* = SWITCH
+================================================ */
+.warps{{{cns}}} .mod-switch {
+    background-image: url(/resources/cth_res/switch_key.png{{{ns}}});
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: auto 28px 38.5px;
+    cursor: pointer;
+    height: 38.5px;
+    width: 28px;
+    margin: auto;
+    position: absolute;
+    z-index: 30;
+    top: 126px;
+    left: 117px;
+}
+
+.warps{{{cns}}} .mod-switch.on {
+  background-position: center top;
+  top: 137px;
+}
+
+.warps{{{cns}}} .mod-switch.off {
+  background-position: center bottom;
+}
+
+/* = KNOBS
+================================================ */
+.warps{{{cns}}} .mod-control-group {
+    position: relative;
+    display: inline-block;
+    width: 418px;
+    height: 53px;
+    z-index: 30;
+}
+
+.warps{{{cns}}} .mod-control-group .mod-knob {
+    display: inline-block;
+}
+
+.warps{{{cns}}} .mod-control-group .mod-knob .mod-knob-image {
+    background-image: url(/resources/cth_res/medium_knob_3_70frames.png{{{ns}}});
+    background-repeat: no-repeat;
+    background-size: auto 53px;
+    display: inline-block;
+    height: 53px;
+    width: 53px;
+}
+
+/* KNOB GROUPS */
+.warps{{{cns}}} .mod-control-group.g1 {
+    margin-top: 333px;
+    margin-left: 26px;
+}
+
+.warps{{{cns}}} .mod-control-group.g1 .mod-knob.warps-timbre {
+    margin-left: 127px;
+}
+
+.warps{{{cns}}} .mod-control-group.g2 {
+    margin-top: 20px;
+    margin-left: 28px;
+}
+
+.warps{{{cns}}} .mod-control-group.g2 .mod-knob.warps-lvl-2 {
+    margin-left: 41px;
+}
+

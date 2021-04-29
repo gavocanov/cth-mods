@@ -14,7 +14,7 @@
 
 warps:doppler
 	a lv2:Plugin, lv2:DelayPlugin, mod:ControlVoltagePlugin ;
-	doap:name "Poly Warps Binaural Doppler Panner" ;
+	doap:name "Warps Binaural Doppler Panner" ;
 	doap:license <http://opensource.org/licenses/gpl> ;
     rdfs:comment """
     TODO
@@ -24,8 +24,8 @@ warps:doppler
         foaf:mbox <mailto:gavocanov@gmail.com> ;
         foaf:homepage <https://github.com/gavocanov/cth-mods>;
     ] ;
-    mod:brand "cth-mods" ;
-    mod:label "Warps" ;
+    mod:brand "cTh-mods" ;
+    mod:label "Warps Binaural Doppler Panner" ;
     lv2:microVersion 1 ;
     lv2:minorVersion 0 ;
 	lv2:requiredFeature urid:map ;
@@ -139,7 +139,7 @@ warps:doppler
 
 warps:fold
 	a lv2:Plugin,lv2:ModulatorPlugin, mod:ControlVoltagePlugin ;
-	doap:name "Poly Warps Wavefolder" ;
+	doap:name "Warps Wavefolder" ;
 	doap:license <http://opensource.org/licenses/gpl> ;
     rdfs:comment """
     TODO
@@ -149,8 +149,8 @@ warps:fold
         foaf:mbox <mailto:gavocanov@gmail.com> ;
         foaf:homepage <https://github.com/gavocanov/cth-mods>;
     ] ;
-    mod:brand "cth-mods" ;
-    mod:label "Warps" ;
+    mod:brand "cTh-mods" ;
+    mod:label "Warps Wavefolder" ;
     lv2:microVersion 1 ;
     lv2:minorVersion 0 ;
 	lv2:requiredFeature urid:map ;
@@ -264,7 +264,7 @@ warps:fold
 
 warps:chebyschev
 	a lv2:Plugin, lv2:DistortionPlugin, mod:ControlVoltagePlugin ;
-	doap:name "Poly Warps Chebyschev" ;
+	doap:name "Warps Chebyschev" ;
 	doap:license <http://opensource.org/licenses/gpl> ;
     rdfs:comment """
     TODO
@@ -274,8 +274,8 @@ warps:chebyschev
         foaf:mbox <mailto:gavocanov@gmail.com> ;
         foaf:homepage <https://github.com/gavocanov/cth-mods>;
     ] ;
-    mod:brand "cth-mods" ;
-    mod:label "Warps" ;
+    mod:brand "cTh-mods" ;
+    mod:label "Warps Chebyschev" ;
     lv2:microVersion 1 ;
     lv2:minorVersion 0 ;
 	lv2:requiredFeature urid:map ;
@@ -389,7 +389,7 @@ warps:chebyschev
 
 warps:frequency_shifter
 	a lv2:Plugin, lv2:ModulatorPlugin, mod:ControlVoltagePlugin ;
-	doap:name "Poly Warps frequency shifter" ;
+	doap:name "Warps Frequency Shifter" ;
 	doap:license <http://opensource.org/licenses/gpl> ;
     rdfs:comment """
     TODO
@@ -399,8 +399,8 @@ warps:frequency_shifter
         foaf:mbox <mailto:gavocanov@gmail.com> ;
         foaf:homepage <https://github.com/gavocanov/cth-mods>;
     ] ;
-    mod:brand "cth-mods" ;
-    mod:label "Warps" ;
+    mod:brand "cTh-mods" ;
+    mod:label "Warps Frequency Shifter" ;
     lv2:microVersion 1 ;
     lv2:minorVersion 0 ;
 	lv2:requiredFeature urid:map ;
@@ -514,7 +514,7 @@ warps:frequency_shifter
 
 warps:bitcrusher
 	a lv2:Plugin, lv2:DistortionPlugin, mod:ControlVoltagePlugin ;
-	doap:name "Poly Warps Bitmangler" ;
+	doap:name "Warps Bitmangler" ;
 	doap:license <http://opensource.org/licenses/gpl> ;
     rdfs:comment """
     TODO
@@ -524,8 +524,8 @@ warps:bitcrusher
         foaf:mbox <mailto:gavocanov@gmail.com> ;
         foaf:homepage <https://github.com/gavocanov/cth-mods>;
     ] ;
-    mod:brand "cth-mods" ;
-    mod:label "Warps" ;
+    mod:brand "cTh-mods" ;
+    mod:label "Warps Bitmangler" ;
     lv2:microVersion 1 ;
     lv2:minorVersion 0 ;
 	lv2:requiredFeature urid:map ;
@@ -639,7 +639,7 @@ warps:bitcrusher
 
 warps:comparator
 	a lv2:Plugin, lv2:ModulatorPlugin, mod:ControlVoltagePlugin ;
-	doap:name "Poly Warps Comparator" ;
+	doap:name "Warps Comparator" ;
 	doap:license <http://opensource.org/licenses/gpl> ;
     rdfs:comment """
     TODO
@@ -649,8 +649,8 @@ warps:comparator
         foaf:mbox <mailto:gavocanov@gmail.com> ;
         foaf:homepage <https://github.com/gavocanov/cth-mods>;
     ] ;
-    mod:brand "cth-mods" ;
-    mod:label "Warps" ;
+    mod:brand "cTh-mods" ;
+    mod:label "Warps Comparator" ;
     lv2:microVersion 1 ;
     lv2:minorVersion 0 ;
 	lv2:requiredFeature urid:map ;
@@ -764,7 +764,7 @@ warps:comparator
 
 warps:vocoder
 	a lv2:Plugin, lv2:ModulatorPlugin, mod:ControlVoltagePlugin ;
-	doap:name "Poly Warps Vocoder" ;
+	doap:name "Warps Vocoder" ;
 	doap:license <http://opensource.org/licenses/gpl> ;
     rdfs:comment """
     TODO
@@ -774,8 +774,8 @@ warps:vocoder
         foaf:mbox <mailto:gavocanov@gmail.com> ;
         foaf:homepage <https://github.com/gavocanov/cth-mods>;
     ] ;
-    mod:brand "cth-mods" ;
-    mod:label "Warps" ;
+    mod:brand "cTh-mods" ;
+    mod:label "Warps Vocoder" ;
     lv2:microVersion 1 ;
     lv2:minorVersion 0 ;
 	lv2:requiredFeature urid:map ;
@@ -889,7 +889,7 @@ warps:vocoder
 
 warps:delay
 	a lv2:Plugin, lv2:DelayPlugin, mod:ControlVoltagePlugin ;
-	doap:name "Poly Warps Delay" ;
+	doap:name "Warps Delay" ;
 	doap:license <http://opensource.org/licenses/gpl> ;
     rdfs:comment """
     TODO
@@ -899,8 +899,8 @@ warps:delay
         foaf:mbox <mailto:gavocanov@gmail.com> ;
         foaf:homepage <https://github.com/gavocanov/cth-mods>;
     ] ;
-    mod:brand "cth-mods" ;
-    mod:label "Warps" ;
+    mod:brand "cTh-mods" ;
+    mod:label "Warps Delay" ;
     lv2:microVersion 1 ;
     lv2:minorVersion 0 ;
 	lv2:requiredFeature urid:map ;
@@ -1014,7 +1014,7 @@ warps:delay
 
 warps:meta
 	a lv2:Plugin, lv2:ModulatorPlugin, mod:ControlVoltagePlugin ;
-	doap:name "Poly Warps Meta" ;
+	doap:name "Warps Meta" ;
 	doap:license <http://opensource.org/licenses/gpl> ;
     rdfs:comment """
     TODO
@@ -1024,8 +1024,8 @@ warps:meta
         foaf:mbox <mailto:gavocanov@gmail.com> ;
         foaf:homepage <https://github.com/gavocanov/cth-mods>;
     ] ;
-    mod:brand "cth-mods" ;
-    mod:label "Warps" ;
+    mod:brand "cTh-mods" ;
+    mod:label "Warps Meta" ;
     lv2:microVersion 1 ;
     lv2:minorVersion 0 ;
 	lv2:requiredFeature urid:map ;

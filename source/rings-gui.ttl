@@ -8,7 +8,7 @@
         modgui:stylesheet <modgui/stylesheet-rings.css> ;
         modgui:screenshot <modgui/screenshot-rings.png> ;
         modgui:thumbnail <modgui/thumbnail-rings.png> ;
-        modgui:brand "Poly" ;
+        modgui:brand "cTh-mods" ;
         modgui:label "Rings" ;
         modgui:port [
             lv2:index 0 ;

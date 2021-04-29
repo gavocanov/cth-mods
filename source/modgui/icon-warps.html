@@ -1,0 +1,57 @@
+<div class="mod-pedal warps{{{cns}}}">
+    <div mod-role="drag-handle" class="mod-drag-handle"></div>
+    <div class=mod-plugin-brand><h1>{{brand}}</h1></div>
+    <div class=mod-plugin-name><h1>{{label}}</h1></div>
+    <div class="mod-light on" mod-role="bypass-light"></div>
+    <div class="mod-control-group g1">
+        <!-- shape -->
+        {{#controls.2}}
+        <div class="mod-knob warps-{{name}}" title="{{symbol}}">
+            <div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+        </div>
+        {{/controls.2}}
+        <!-- timber -->
+        {{#controls.1}}
+        <div class="mod-knob warps-{{name}}" title="{{symbol}}">
+            <div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+        </div>
+        {{/controls.1}}
+    </div>
+    <div class="mod-control-group g2">
+        <!-- lvl1 -->
+        {{#controls.3}}
+        <div class="mod-knob warps-{{name}}" title="{{symbol}}">
+            <div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+        </div>
+        {{/controls.3}}
+        <!-- lvl2 -->
+        {{#controls.4}}
+        <div class="mod-knob warps-{{name}}" title="{{symbol}}">
+            <div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+        </div>
+        {{/controls.4}}
+    </div>
+    <div class="mod-switch" mod-role="bypass"></div>
+    <div class="mod-pedal-input">
+        <!-- cv -->
+        {{#effect.ports.cv.input}}
+        <div class="mod-input mod-input-disconnected warps-{{symbol}}" title="{{name}}" mod-role="input-cv-port" mod-port-symbol="{{symbol}}">
+            <div class="mod-pedal-input-image"></div>
+        </div>
+        {{/effect.ports.cv.input}}
+
+        <!-- audio -->
+        {{#effect.ports.audio.input}}
+        <div class="mod-input mod-input-disconnected warps-{{symbol}}" title="{{name}}" mod-role="input-audio-port" mod-port-symbol="{{symbol}}">
+            <div class="mod-pedal-input-image"></div>
+        </div>
+        {{/effect.ports.audio.input}}
+    </div>
+    <div class="mod-pedal-output">
+        {{#effect.ports.audio.output}}
+        <div class="mod-output mod-output-disconnected warps-{{symbol}}" title="{{name}}" mod-role="output-audio-port" mod-port-symbol="{{symbol}}">
+            <div class="mod-pedal-output-image"></div>
+        </div>
+        {{/effect.ports.audio.output}}
+    </div>
+</div>

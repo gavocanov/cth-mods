@@ -14,7 +14,7 @@
 
 clouds:granular
 	a lv2:Plugin, lv2:DelayPlugin, mod:ControlVoltagePlugin ;
-	doap:name "Poly Clouds Granular" ;
+	doap:name "Clouds Granular" ;
 	doap:license <http://opensource.org/licenses/gpl> ;
     rdfs:comment """
     TODO
@@ -24,7 +24,7 @@ clouds:granular
         foaf:mbox <mailto:gavocanov@gmail.com> ;
         foaf:homepage <https://github.com/gavocanov/cth-mods>;
     ] ;
-    mod:brand "cth-mods" ;
+    mod:brand "cTh-mods" ;
     mod:label "Clouds" ;
     lv2:microVersion 1 ;
     lv2:minorVersion 0 ;
@@ -284,7 +284,7 @@ clouds:stretch
         foaf:mbox <mailto:gavocanov@gmail.com> ;
         foaf:homepage <https://github.com/gavocanov/cth-mods>;
     ] ;
-    mod:brand "cth-mods" ;
+    mod:brand "cTh-mods" ;
     mod:label "Clouds" ;
     lv2:microVersion 1 ;
     lv2:minorVersion 0 ;
@@ -543,7 +543,7 @@ clouds:looping_delay
         foaf:mbox <mailto:gavocanov@gmail.com> ;
         foaf:homepage <https://github.com/gavocanov/cth-mods>;
     ] ;
-    mod:brand "cth-mods" ;
+    mod:brand "cTh-mods" ;
     mod:label "Clouds" ;
     lv2:microVersion 1 ;
     lv2:minorVersion 0 ;
@@ -802,7 +802,7 @@ clouds:spectral
         foaf:mbox <mailto:gavocanov@gmail.com> ;
         foaf:homepage <https://github.com/gavocanov/cth-mods>;
     ] ;
-    mod:brand "cth-mods" ;
+    mod:brand "cTh-mods" ;
     mod:label "Clouds" ;
     lv2:microVersion 1 ;
     lv2:minorVersion 0 ;
@@ -1061,7 +1061,7 @@ clouds:oliverb
         foaf:mbox <mailto:gavocanov@gmail.com> ;
         foaf:homepage <https://github.com/gavocanov/cth-mods>;
     ] ;
-    mod:brand "cth-mods" ;
+    mod:brand "cTh-mods" ;
     mod:label "Clouds" ;
     lv2:microVersion 1 ;
     lv2:minorVersion 0 ;
@@ -1321,7 +1321,7 @@ clouds:resonestor
         foaf:mbox <mailto:gavocanov@gmail.com> ;
         foaf:homepage <https://github.com/gavocanov/cth-mods>;
     ] ;
-    mod:brand "cth-mods" ;
+    mod:brand "cTh-mods" ;
     mod:label "Clouds" ;
     lv2:microVersion 1 ;
     lv2:minorVersion 0 ;
@@ -1581,7 +1581,7 @@ clouds:beat_repeat
         foaf:mbox <mailto:gavocanov@gmail.com> ;
         foaf:homepage <https://github.com/gavocanov/cth-mods>;
     ] ;
-    mod:brand "cth-mods" ;
+    mod:brand "cTh-mods" ;
     mod:label "Clouds" ;
     lv2:microVersion 1 ;
     lv2:minorVersion 0 ;

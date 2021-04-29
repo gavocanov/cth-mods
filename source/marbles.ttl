@@ -13,7 +13,7 @@
 
 <http://polyeffects.com/lv2/polymarbles>
 	a lv2:Plugin, lv2:GeneratorPlugin, mod:ControlVoltagePlugin ;
-	doap:name "Poly Marbles" ;
+	doap:name "Marbles" ;
 	doap:license <http://opensource.org/licenses/gpl> ;
     rdfs:comment """
     TODO
@@ -23,7 +23,7 @@
         foaf:mbox <mailto:gavocanov@gmail.com> ;
         foaf:homepage <https://github.com/gavocanov/cth-mods>;
     ] ;
-    mod:brand "cth-mods" ;
+    mod:brand "cTh-mods" ;
     mod:label "Marbles" ;
     lv2:microVersion 1 ;
     lv2:minorVersion 0 ;

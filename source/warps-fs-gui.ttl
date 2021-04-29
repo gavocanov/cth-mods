@@ -1,0 +1,34 @@
+@prefix modgui: <http://moddevices.com/ns/modgui#> .
+@prefix lv2:    <http://lv2plug.in/ns/lv2core#> .
+
+<http://polyeffects.com/lv2/polywarps#frequency_shifter>
+    modgui:gui [
+        modgui:resourcesDirectory <modgui> ;
+        modgui:iconTemplate <modgui/icon-warps.html> ;
+        modgui:stylesheet <modgui/stylesheet-warps.css> ;
+        modgui:screenshot <modgui/screenshot-warps.png> ;
+        modgui:thumbnail <modgui/thumbnail-warps.png> ;
+        modgui:brand "Warps" ;
+        modgui:label "Freq shifter" ;
+        modgui:port [
+            lv2:index 0 ;
+            lv2:symbol "frequency_shift" ;
+            lv2:name "bits" ;
+        ] , [
+            lv2:index 1 ;
+            lv2:symbol "crossfade" ;
+            lv2:name "timbre" ;
+        ] , [
+            lv2:index 2 ;
+            lv2:symbol "mode" ;
+            lv2:name "shape" ;
+        ] , [
+            lv2:index 3 ;
+            lv2:symbol "feedback" ;
+            lv2:name "lvl-1" ;
+        ] , [
+            lv2:index 4 ;
+            lv2:symbol "dry_wet" ;
+            lv2:name "lvl-2" ;
+        ] ;
+    ] .

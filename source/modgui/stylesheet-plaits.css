@@ -10,6 +10,46 @@
     width: 359px;
 }
 
+/* = PLUGIN'S AUTHOR
+================================================ */
+.plaits{{{cns}}} .mod-plugin-brand {
+    left:0;
+    position:absolute;
+    right:0;
+    text-align:center;
+    text-transform:uppercase;
+    top:0px;
+}
+
+.plaits{{{cns}}} .mod-plugin-brand h1 {
+    border-color:#000;
+    border-radius:6px;
+    border-style:solid;
+    border-width:2px;
+    display:inline-block;
+    font-family:"Nexa";
+    font-size:22px;
+    line-height: 1;
+    padding:1px 1px 0;
+}
+
+/* = PLUGIN'S NAME
+================================================ */
+.plaits{{{cns}}} .mod-plugin-name {
+    left:30px;
+    overflow:hidden;
+    position:absolute;
+    right:30px;
+    text-align:center;
+    top:714px;
+}
+
+.plaits{{{cns}}} .mod-plugin-name h1 {
+    font-family:"Questrial";
+    font-size:21px;
+    line-height:1;
+}
+
 /* PORTS
 ================================================ */
 .plaits{{{cns}}} .mod-pedal-input {

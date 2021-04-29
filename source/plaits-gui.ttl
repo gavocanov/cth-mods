@@ -8,7 +8,7 @@
         modgui:stylesheet <modgui/stylesheet-plaits.css> ;
         modgui:screenshot <modgui/screenshot-plaits.png> ;
         modgui:thumbnail <modgui/thumbnail-plaits.png> ;
-        modgui:brand "Poly" ;
+        modgui:brand "cTh-mods" ;
         modgui:label "Plaits" ;
         modgui:port [
             lv2:index 0 ;

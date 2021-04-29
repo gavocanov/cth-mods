@@ -8,7 +8,7 @@
         modgui:stylesheet <modgui/stylesheet-clouds.css> ;
         modgui:screenshot <modgui/screenshot-clouds.png> ;
         modgui:thumbnail <modgui/thumbnail-clouds.png> ;
-        modgui:brand "Poly" ;
+        modgui:brand "cTh-mods" ;
         modgui:label "Clouds" ;
         modgui:port [
             lv2:index 0 ;
