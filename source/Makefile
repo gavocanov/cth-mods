@@ -143,7 +143,15 @@ all: $(BUILDDIR)manifest.ttl \
 	$(BUILDDIR)$(LV2NAME_PLAITS).ttl \
 	$(BUILDDIR)$(LV2NAME_MARBLES).ttl \
 	$(BUILDDIR)$(LV2NAME_RINGS).ttl \
-	$(BUILDDIR)$(LV2NAME_WARPS)-gui.ttl \
+	$(BUILDDIR)$(LV2NAME_WARPS)-bc-gui.ttl \
+	$(BUILDDIR)$(LV2NAME_WARPS)-ch-gui.ttl \
+	$(BUILDDIR)$(LV2NAME_WARPS)-cp-gui.ttl \
+	$(BUILDDIR)$(LV2NAME_WARPS)-dl-gui.ttl \
+	$(BUILDDIR)$(LV2NAME_WARPS)-do-gui.ttl \
+	$(BUILDDIR)$(LV2NAME_WARPS)-fo-gui.ttl \
+	$(BUILDDIR)$(LV2NAME_WARPS)-fs-gui.ttl \
+	$(BUILDDIR)$(LV2NAME_WARPS)-mt-gui.ttl \
+	$(BUILDDIR)$(LV2NAME_WARPS)-vo-gui.ttl \
 	$(BUILDDIR)$(LV2NAME_CLOUDS)-gui.ttl \
 	$(BUILDDIR)$(LV2NAME_PLAITS)-gui.ttl \
 	$(BUILDDIR)$(LV2NAME_MARBLES)-gui.ttl \
@@ -173,9 +181,33 @@ $(BUILDDIR)$(LV2NAME_WARPS).ttl: $(LV2NAME_WARPS).ttl
 	@mkdir -p $(BUILDDIR)
 	cat $(LV2NAME_WARPS).ttl > $(BUILDDIR)$(LV2NAME_WARPS).ttl
 
-$(BUILDDIR)$(LV2NAME_WARPS)-gui.ttl: $(LV2NAME_WARPS)-gui.ttl
+$(BUILDDIR)$(LV2NAME_WARPS)-bc-gui.ttl: $(LV2NAME_WARPS)-bc-gui.ttl
 	@mkdir -p $(BUILDDIR)
-	cat $(LV2NAME_WARPS)-gui.ttl > $(BUILDDIR)$(LV2NAME_WARPS)-gui.ttl
+	cat $(LV2NAME_WARPS)-bc-gui.ttl > $(BUILDDIR)$(LV2NAME_WARPS)-bc-gui.ttl
+$(BUILDDIR)$(LV2NAME_WARPS)-ch-gui.ttl: $(LV2NAME_WARPS)-ch-gui.ttl
+	@mkdir -p $(BUILDDIR)
+	cat $(LV2NAME_WARPS)-ch-gui.ttl > $(BUILDDIR)$(LV2NAME_WARPS)-ch-gui.ttl
+$(BUILDDIR)$(LV2NAME_WARPS)-cp-gui.ttl: $(LV2NAME_WARPS)-cp-gui.ttl
+	@mkdir -p $(BUILDDIR)
+	cat $(LV2NAME_WARPS)-cp-gui.ttl > $(BUILDDIR)$(LV2NAME_WARPS)-cp-gui.ttl
+$(BUILDDIR)$(LV2NAME_WARPS)-dl-gui.ttl: $(LV2NAME_WARPS)-dl-gui.ttl
+	@mkdir -p $(BUILDDIR)
+	cat $(LV2NAME_WARPS)-dl-gui.ttl > $(BUILDDIR)$(LV2NAME_WARPS)-dl-gui.ttl
+$(BUILDDIR)$(LV2NAME_WARPS)-do-gui.ttl: $(LV2NAME_WARPS)-do-gui.ttl
+	@mkdir -p $(BUILDDIR)
+	cat $(LV2NAME_WARPS)-do-gui.ttl > $(BUILDDIR)$(LV2NAME_WARPS)-do-gui.ttl
+$(BUILDDIR)$(LV2NAME_WARPS)-fo-gui.ttl: $(LV2NAME_WARPS)-fo-gui.ttl
+	@mkdir -p $(BUILDDIR)
+	cat $(LV2NAME_WARPS)-fo-gui.ttl > $(BUILDDIR)$(LV2NAME_WARPS)-fo-gui.ttl
+$(BUILDDIR)$(LV2NAME_WARPS)-fs-gui.ttl: $(LV2NAME_WARPS)-fs-gui.ttl
+	@mkdir -p $(BUILDDIR)
+	cat $(LV2NAME_WARPS)-fs-gui.ttl > $(BUILDDIR)$(LV2NAME_WARPS)-fs-gui.ttl
+$(BUILDDIR)$(LV2NAME_WARPS)-mt-gui.ttl: $(LV2NAME_WARPS)-mt-gui.ttl
+	@mkdir -p $(BUILDDIR)
+	cat $(LV2NAME_WARPS)-mt-gui.ttl > $(BUILDDIR)$(LV2NAME_WARPS)-mt-gui.ttl
+$(BUILDDIR)$(LV2NAME_WARPS)-vo-gui.ttl: $(LV2NAME_WARPS)-vo-gui.ttl
+	@mkdir -p $(BUILDDIR)
+	cat $(LV2NAME_WARPS)-vo-gui.ttl > $(BUILDDIR)$(LV2NAME_WARPS)-vo-gui.ttl
 
 $(BUILDDIR)$(LV2NAME_PLAITS).ttl: $(LV2NAME_PLAITS).ttl
 	@mkdir -p $(BUILDDIR)
@@ -249,7 +281,15 @@ install: all
 		$(BUILDDIR)$(LV2NAME_MARBLES).ttl \
 		$(BUILDDIR)$(LV2NAME_RINGS).ttl \
 		$(BUILDDIR)$(LV2NAME_CLOUDS)-gui.ttl \
-		$(BUILDDIR)$(LV2NAME_WARPS)-gui.ttl \
+		$(BUILDDIR)$(LV2NAME_WARPS)-bc-gui.ttl \
+		$(BUILDDIR)$(LV2NAME_WARPS)-ch-gui.ttl \
+		$(BUILDDIR)$(LV2NAME_WARPS)-cp-gui.ttl \
+		$(BUILDDIR)$(LV2NAME_WARPS)-dl-gui.ttl \
+		$(BUILDDIR)$(LV2NAME_WARPS)-do-gui.ttl \
+		$(BUILDDIR)$(LV2NAME_WARPS)-fo-gui.ttl \
+		$(BUILDDIR)$(LV2NAME_WARPS)-fs-gui.ttl \
+		$(BUILDDIR)$(LV2NAME_WARPS)-mt-gui.ttl \
+		$(BUILDDIR)$(LV2NAME_WARPS)-vo-gui.ttl \
 		$(BUILDDIR)$(LV2NAME_PLAITS)-gui.ttl \
 		$(BUILDDIR)$(LV2NAME_MARBLES)-gui.ttl \
 		$(BUILDDIR)$(LV2NAME_RINGS)-gui.ttl \
@@ -262,7 +302,15 @@ uninstall:
 	rm -f  $(DESTDIR)$(LV2DIR)/$(BUNDLE)/$(LV2NAME_CLOUDS)-gui.ttl
 	rm -f  $(DESTDIR)$(LV2DIR)/$(BUNDLE)/$(LV2NAME_CLOUDS)$(LIB_EXT)
 	rm -f  $(DESTDIR)$(LV2DIR)/$(BUNDLE)/$(LV2NAME_WARPS).ttl
-	rm -f  $(DESTDIR)$(LV2DIR)/$(BUNDLE)/$(LV2NAME_WARPS)-gui.ttl
+	rm -f  $(DESTDIR)$(LV2DIR)/$(BUNDLE)/$(LV2NAME_WARPS)-bc-gui.ttl
+	rm -f  $(DESTDIR)$(LV2DIR)/$(BUNDLE)/$(LV2NAME_WARPS)-ch-gui.ttl
+	rm -f  $(DESTDIR)$(LV2DIR)/$(BUNDLE)/$(LV2NAME_WARPS)-cp-gui.ttl
+	rm -f  $(DESTDIR)$(LV2DIR)/$(BUNDLE)/$(LV2NAME_WARPS)-dl-gui.ttl
+	rm -f  $(DESTDIR)$(LV2DIR)/$(BUNDLE)/$(LV2NAME_WARPS)-do-gui.ttl
+	rm -f  $(DESTDIR)$(LV2DIR)/$(BUNDLE)/$(LV2NAME_WARPS)-fo-gui.ttl
+	rm -f  $(DESTDIR)$(LV2DIR)/$(BUNDLE)/$(LV2NAME_WARPS)-fs-gui.ttl
+	rm -f  $(DESTDIR)$(LV2DIR)/$(BUNDLE)/$(LV2NAME_WARPS)-mt-gui.ttl
+	rm -f  $(DESTDIR)$(LV2DIR)/$(BUNDLE)/$(LV2NAME_WARPS)-vo-gui.ttl
 	rm -f  $(DESTDIR)$(LV2DIR)/$(BUNDLE)/$(LV2NAME_WARPS)$(LIB_EXT)
 	rm -f  $(DESTDIR)$(LV2DIR)/$(BUNDLE)/$(LV2NAME_PLAITS).ttl
 	rm -f  $(DESTDIR)$(LV2DIR)/$(BUNDLE)/$(LV2NAME_PLAITS)-gui.ttl
@@ -285,7 +333,15 @@ clean:
 	rm -f  $(BUILDDIR)$(LV2NAME_PLAITS).ttl $(BUILDDIR)$(LV2NAME_PLAITS)$(LIB_EXT)
 	rm -f  $(BUILDDIR)$(LV2NAME_RINGS).ttl $(BUILDDIR)$(LV2NAME_RINGS)$(LIB_EXT)
 	rm -f  $(BUILDDIR)$(LV2NAME_CLOUDS)-gui.ttl
-	rm -f  $(BUILDDIR)$(LV2NAME_WARPS)-gui.ttl
+	rm -f  $(BUILDDIR)$(LV2NAME_WARPS)-bc-gui.ttl
+	rm -f  $(BUILDDIR)$(LV2NAME_WARPS)-ch-gui.ttl
+	rm -f  $(BUILDDIR)$(LV2NAME_WARPS)-cp-gui.ttl
+	rm -f  $(BUILDDIR)$(LV2NAME_WARPS)-dl-gui.ttl
+	rm -f  $(BUILDDIR)$(LV2NAME_WARPS)-do-gui.ttl
+	rm -f  $(BUILDDIR)$(LV2NAME_WARPS)-fo-gui.ttl
+	rm -f  $(BUILDDIR)$(LV2NAME_WARPS)-fs-gui.ttl
+	rm -f  $(BUILDDIR)$(LV2NAME_WARPS)-mt-gui.ttl
+	rm -f  $(BUILDDIR)$(LV2NAME_WARPS)-vo-gui.ttl
 	rm -f  $(BUILDDIR)$(LV2NAME_MARBLES)-gui.ttl
 	rm -f  $(BUILDDIR)$(LV2NAME_PLAITS)-gui.ttl
 	rm -f  $(BUILDDIR)$(LV2NAME_RINGS)-gui.ttl
