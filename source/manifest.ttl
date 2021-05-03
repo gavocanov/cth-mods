@@ -103,13 +103,13 @@ warps:meta
 <http://polyeffects.com/lv2/polyrings>   rdfs:seeAlso <rings-gui.ttl> .
 <http://polyeffects.com/lv2/polymarbles> rdfs:seeAlso <marbles-gui.ttl> .
 
-<http://polyeffects.com/lv2/polyclouds#beat_repeat>   rdfs:seeAlso <clouds-gui.ttl> .
-<http://polyeffects.com/lv2/polyclouds#resonestor>    rdfs:seeAlso <clouds-gui.ttl> .
-<http://polyeffects.com/lv2/polyclouds#oliverb>       rdfs:seeAlso <clouds-gui.ttl> .
-<http://polyeffects.com/lv2/polyclouds#spectral>      rdfs:seeAlso <clouds-gui.ttl> .
-<http://polyeffects.com/lv2/polyclouds#looping_delay> rdfs:seeAlso <clouds-gui.ttl> .
-<http://polyeffects.com/lv2/polyclouds#stretch>       rdfs:seeAlso <clouds-gui.ttl> .
-<http://polyeffects.com/lv2/polyclouds#granular>      rdfs:seeAlso <clouds-gui.ttl> .
+<http://polyeffects.com/lv2/polyclouds#beat_repeat>   rdfs:seeAlso <clouds-br-gui.ttl> .
+<http://polyeffects.com/lv2/polyclouds#resonestor>    rdfs:seeAlso <clouds-rs-gui.ttl> .
+<http://polyeffects.com/lv2/polyclouds#oliverb>       rdfs:seeAlso <clouds-ol-gui.ttl> .
+<http://polyeffects.com/lv2/polyclouds#spectral>      rdfs:seeAlso <clouds-sp-gui.ttl> .
+<http://polyeffects.com/lv2/polyclouds#looping_delay> rdfs:seeAlso <clouds-ld-gui.ttl> .
+<http://polyeffects.com/lv2/polyclouds#stretch>       rdfs:seeAlso <clouds-st-gui.ttl> .
+<http://polyeffects.com/lv2/polyclouds#granular>      rdfs:seeAlso <clouds-gr-gui.ttl> .
 
 <http://polyeffects.com/lv2/polywarps#bitcrusher>        rdfs:seeAlso <warps-bc-gui.ttl> .
 <http://polyeffects.com/lv2/polywarps#doppler>           rdfs:seeAlso <warps-do-gui.ttl> .

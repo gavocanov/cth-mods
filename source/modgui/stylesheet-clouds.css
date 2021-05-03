@@ -1,0 +1,194 @@
+/* = CONTAINER
+================================================ */
+.clouds{{{cns}}} {
+    background-image: url(/resources/cth_res/clouds_bg2.png{{{ns}}});
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 539px 852px;
+    height: 852px;
+    position: absolute;
+    width: 539px;
+}
+
+/* = PLUGIN'S AUTHOR
+================================================ */
+.clouds{{{cns}}} .mod-plugin-brand {
+    left:0;
+    position:absolute;
+    right:0;
+    text-align:center;
+    text-transform:uppercase;
+    top:0px;
+}
+
+.clouds{{{cns}}} .mod-plugin-brand h1 {
+    border-color:#000;
+    border-radius:6px;
+    border-style:solid;
+    border-width:2px;
+    display:inline-block;
+    font-family:"Nexa";
+    font-size:22px;
+    line-height: 1;
+    padding:1px 1px 0;
+}
+
+/* = PLUGIN'S NAME
+================================================ */
+.clouds{{{cns}}} .mod-plugin-name {
+    left:30px;
+    overflow:hidden;
+    position:absolute;
+    right:30px;
+    text-align:center;
+    top:600px;
+}
+
+.clouds{{{cns}}} .mod-plugin-name h1 {
+    font-family:"Questrial";
+    font-size:21px;
+    line-height:1;
+}
+
+/* PORTS
+================================================ */
+.clouds{{{cns}}} .mod-pedal-input {
+    top: 30px;
+}
+
+.clouds{{{cns}}} .mod-pedal-output {
+    top: 30px;
+}
+
+.clouds{{{cns}}} .mod-pedal-input .mod-audio-input {
+    margin-bottom: 1px;
+}
+
+.clouds{{{cns}}} .mod-pedal-input .mod-cv-input {
+    margin-bottom: 1px;
+}
+
+.clouds{{{cns}}} .mod-pedal-output .mod-audio-output {
+    margin-bottom: 1px;
+}
+
+/* = LIGHT ON/OFF
+================================================ */
+.clouds{{{cns}}} .mod-light {
+    background-image: url(/resources/cth_res/lights.png{{{ns}}}) !important;
+    background-position: right center;
+    background-repeat: no-repeat;
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    top: 560px;
+    left: 275px;
+}
+
+.clouds{{{cns}}} .mod-light.off {
+  background-position: right center;
+}
+
+.clouds{{{cns}}} .mod-light.on {
+  background-position: left center;
+}
+
+/* = SWITCH
+================================================ */
+.clouds{{{cns}}} .mod-switch {
+    background-image: url(/resources/cth_res/switch_key.png{{{ns}}});
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: auto 28px 38.5px;
+    cursor: pointer;
+    height: 38.5px;
+    width: 28px;
+    margin: auto;
+    position: absolute;
+    z-index: 30;
+    top: 548px;
+    left: 247px;
+}
+
+.clouds{{{cns}}} .mod-switch.on {
+    background-position: center top;
+    top: 558px;
+}
+
+.clouds{{{cns}}} .mod-switch.off {
+    background-position: center bottom;
+}
+
+/* = KNOBS
+================================================ */
+.clouds{{{cns}}} .mod-control-group {
+    position: relative;
+    z-index: 30;
+}
+
+.clouds{{{cns}}} .mod-control-group .mod-knob {
+    display: inline-block;
+}
+
+.clouds{{{cns}}} .mod-control-group .mod-knob .mod-knob-image {
+    background-image: url(/resources/cth_res/medium_knob_3_70frames.png{{{ns}}});
+    background-repeat: no-repeat;
+    background-size: auto 53px;
+    height: 53px;
+    width: 53px;
+}
+
+/* KNOB GROUP 1 */
+.clouds{{{cns}}} .mod-control-group.g1 {
+    margin-top: 89px;
+    margin-left: 22px;
+}
+
+.clouds{{{cns}}} .mod-control-group.g1 .mod-knob.clouds-spread_param {
+    margin-left: 71px;
+}
+
+.clouds{{{cns}}} .mod-control-group.g1 .mod-knob.clouds-feedback_param {
+    margin-left: 6px;
+}
+
+.clouds{{{cns}}} .mod-control-group.g1 .mod-knob.clouds-reverb_param {
+    margin-left: 9px;
+}
+
+.clouds{{{cns}}} .mod-control-group.g1 .mod-knob.clouds-reverse_param {
+    margin-left: 6px;
+}
+
+/* KNOB GROUP 2 */
+.clouds{{{cns}}} .mod-control-group.g2 {
+    margin-top: 68px;
+    margin-left: 80px;
+}
+
+.clouds{{{cns}}} .mod-control-group.g2 .mod-knob.clouds-size_param {
+    margin-left: 108px;
+}
+
+.clouds{{{cns}}} .mod-control-group.g2 .mod-knob.clouds-pitch_param {
+    margin-left: 105px;
+}
+
+/* KNOB GROUP 3 */
+.clouds{{{cns}}} .mod-control-group.g3 {
+    margin-top: 108px;
+    margin-left: 46px;
+}
+
+.clouds{{{cns}}} .mod-control-group.g3 .mod-knob.clouds-density_param {
+    margin-left: 74px;
+}
+
+.clouds{{{cns}}} .mod-control-group.g3 .mod-knob.clouds-texture_param {
+    margin-left: 74px;
+}
+
+.clouds{{{cns}}} .mod-control-group.g3 .mod-knob.clouds-blend_param {
+    margin-left: 78px;
+}
+

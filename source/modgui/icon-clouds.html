@@ -1,0 +1,104 @@
+<div class="mod-pedal clouds{{{cns}}}">
+    <div mod-role="drag-handle" class="mod-drag-handle"></div>
+    <div class=mod-plugin-brand><h1>{{brand}}</h1></div>
+    <div class=mod-plugin-name><h1>{{label}}</h1></div>
+    <div class="mod-light on" mod-role="bypass-light"></div>
+    <div class="mod-control-group g1">
+        <!-- freeze -->
+        {{#controls.10}}
+        <div class="mod-knob clouds-{{symbol}}" title="{{name}}">
+            <div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+        </div>
+        {{/controls.10}}
+        <!-- spread -->
+        {{#controls.7}}
+        <div class="mod-knob clouds-{{symbol}}" title="{{name}}">
+            <div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+        </div>
+        {{/controls.7}}
+        <!-- feedback -->
+        {{#controls.8}}
+        <div class="mod-knob clouds-{{symbol}}" title="{{name}}">
+            <div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+        </div>
+        {{/controls.8}}
+        <!-- reverb -->
+        {{#controls.9}}
+        <div class="mod-knob clouds-{{symbol}}" title="{{name}}">
+            <div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+        </div>
+        {{/controls.9}}
+        <!-- reverse -->
+        {{#controls.11}}
+        <div class="mod-knob clouds-{{symbol}}" title="{{name}}">
+            <div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+        </div>
+        {{/controls.11}}
+    </div>
+    <div class="mod-control-group g2">
+        <!-- position -->
+        {{#controls.0}}
+        <div class="mod-knob clouds-{{symbol}}" title="{{name}}">
+            <div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+        </div>
+        {{/controls.0}}
+        <!-- size -->
+        {{#controls.1}}
+        <div class="mod-knob clouds-{{symbol}}" title="{{name}}">
+            <div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+        </div>
+        {{/controls.1}}
+        <!-- pitch -->
+        {{#controls.2}}
+        <div class="mod-knob clouds-{{symbol}}" title="{{name}}">
+            <div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+        </div>
+        {{/controls.2}}
+    </div>
+    <div class="mod-control-group g3">
+        <!-- gain -->
+        {{#controls.3}}
+        <div class="mod-knob clouds-{{symbol}}" title="{{name}}">
+            <div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+        </div>
+        {{/controls.3}}
+        <!-- density -->
+        {{#controls.4}}
+        <div class="mod-knob clouds-{{symbol}}" title="{{name}}">
+            <div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+        </div>
+        {{/controls.4}}
+        <!-- texture -->
+        {{#controls.5}}
+        <div class="mod-knob clouds-{{symbol}}" title="{{name}}">
+            <div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+        </div>
+        {{/controls.5}}
+        <!-- blend -->
+        {{#controls.6}}
+        <div class="mod-knob clouds-{{symbol}}" title="{{name}}">
+            <div class="mod-knob-image" mod-role="input-control-port" mod-port-symbol="{{symbol}}"></div>
+        </div>
+        {{/controls.6}}
+    </div>
+    <div class="mod-switch" mod-role="bypass"></div>
+    <div class="mod-pedal-input">
+        {{#effect.ports.audio.input}}
+        <div class="mod-input mod-input-disconnected clouds-{{symbol}}" title="{{name}}" mod-role="input-audio-port" mod-port-symbol="{{symbol}}">
+            <div class="mod-pedal-input-image"></div>
+        </div>
+        {{/effect.ports.audio.input}}
+        {{#effect.ports.cv.input}}
+        <div class="mod-input mod-input-disconnected clouds-{{symbol}}" title="{{name}}" mod-role="input-cv-port" mod-port-symbol="{{symbol}}">
+            <div class="mod-pedal-input-image"></div>
+        </div>
+        {{/effect.ports.cv.input}}
+    </div>
+    <div class="mod-pedal-output">
+        {{#effect.ports.audio.output}}
+        <div class="mod-output mod-output-disconnected clouds-{{symbol}}" title="{{name}}" mod-role="output-audio-port" mod-port-symbol="{{symbol}}">
+            <div class="mod-pedal-output-image"></div>
+        </div>
+        {{/effect.ports.audio.output}}
+    </div>
+</div>

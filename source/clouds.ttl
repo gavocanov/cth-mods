@@ -25,7 +25,7 @@ clouds:granular
         foaf:homepage <https://github.com/gavocanov/cth-mods>;
     ] ;
     mod:brand "cTh-mods" ;
-    mod:label "Clouds" ;
+    mod:label "Clouds Granular" ;
     lv2:microVersion 1 ;
     lv2:minorVersion 0 ;
 	lv2:requiredFeature urid:map ;
@@ -98,7 +98,7 @@ clouds:granular
 			lv2:CVPort, mod:CVPort ;
 		lv2:index 7 ;
 		lv2:symbol "Feedback" ;
-		lv2:name "feedback" ;
+		lv2:name "Feedback" ;
 		lv2:default 0.0 ;
 		lv2:minimum 0.0 ;
 		lv2:maximum 1.0 ;
@@ -274,7 +274,7 @@ clouds:granular
 
 clouds:stretch
 	a lv2:Plugin, lv2:DelayPlugin, mod:ControlVoltagePlugin ;
-	doap:name "Poly Clouds Stretch" ;
+	doap:name "Clouds Stretch" ;
 	doap:license <http://opensource.org/licenses/gpl> ;
     rdfs:comment """
     TODO
@@ -285,7 +285,7 @@ clouds:stretch
         foaf:homepage <https://github.com/gavocanov/cth-mods>;
     ] ;
     mod:brand "cTh-mods" ;
-    mod:label "Clouds" ;
+    mod:label "Clouds Stretch" ;
     lv2:microVersion 1 ;
     lv2:minorVersion 0 ;
 	lv2:requiredFeature urid:map ;
@@ -358,7 +358,7 @@ clouds:stretch
 			lv2:CVPort, mod:CVPort ;
 		lv2:index 7 ;
 		lv2:symbol "Feedback" ;
-		lv2:name "feedback" ;
+		lv2:name "Feedback" ;
 		lv2:default 0.0 ;
 		lv2:minimum 0.0 ;
 		lv2:maximum 1.0 ;
@@ -533,7 +533,7 @@ clouds:stretch
 	] .
 clouds:looping_delay
 	a lv2:Plugin, lv2:DelayPlugin, mod:ControlVoltagePlugin ;
-	doap:name "Poly Clouds Looping Delay" ;
+	doap:name "Clouds Looping Delay" ;
 	doap:license <http://opensource.org/licenses/gpl> ;
     rdfs:comment """
     TODO
@@ -544,7 +544,7 @@ clouds:looping_delay
         foaf:homepage <https://github.com/gavocanov/cth-mods>;
     ] ;
     mod:brand "cTh-mods" ;
-    mod:label "Clouds" ;
+    mod:label "Clouds Looping Delay" ;
     lv2:microVersion 1 ;
     lv2:minorVersion 0 ;
 	lv2:requiredFeature urid:map ;
@@ -617,7 +617,7 @@ clouds:looping_delay
 			lv2:CVPort, mod:CVPort ;
 		lv2:index 7 ;
 		lv2:symbol "Feedback" ;
-		lv2:name "feedback" ;
+		lv2:name "Feedback" ;
 		lv2:default 0.0 ;
 		lv2:minimum 0.0 ;
 		lv2:maximum 1.0 ;
@@ -792,7 +792,7 @@ clouds:looping_delay
 	] .
 clouds:spectral
 	a lv2:Plugin, lv2:SpectralPlugin, mod:ControlVoltagePlugin ;
-	doap:name "Poly Clouds Spectral" ;
+	doap:name "Clouds Spectral" ;
 	doap:license <http://opensource.org/licenses/gpl> ;
     rdfs:comment """
     TODO
@@ -803,7 +803,7 @@ clouds:spectral
         foaf:homepage <https://github.com/gavocanov/cth-mods>;
     ] ;
     mod:brand "cTh-mods" ;
-    mod:label "Clouds" ;
+    mod:label "Clouds Spectral" ;
     lv2:microVersion 1 ;
     lv2:minorVersion 0 ;
 	lv2:requiredFeature urid:map ;
@@ -876,7 +876,7 @@ clouds:spectral
 			lv2:CVPort, mod:CVPort ;
 		lv2:index 7 ;
 		lv2:symbol "Feedback" ;
-		lv2:name "feedback" ;
+		lv2:name "Feedback" ;
 		lv2:default 0.0 ;
 		lv2:minimum 0.0 ;
 		lv2:maximum 1.0 ;
@@ -1051,7 +1051,7 @@ clouds:spectral
 	] .
 clouds:oliverb
 	a lv2:Plugin, lv2:ReverbPlugin, mod:ControlVoltagePlugin ;
-	doap:name "Poly Clouds Oliverb" ;
+	doap:name "Clouds Oliverb" ;
 	doap:license <http://opensource.org/licenses/gpl> ;
     rdfs:comment """
     TODO
@@ -1062,7 +1062,7 @@ clouds:oliverb
         foaf:homepage <https://github.com/gavocanov/cth-mods>;
     ] ;
     mod:brand "cTh-mods" ;
-    mod:label "Clouds" ;
+    mod:label "Clouds Oliverb" ;
     lv2:microVersion 1 ;
     lv2:minorVersion 0 ;
 	lv2:requiredFeature urid:map ;
@@ -1090,7 +1090,7 @@ clouds:oliverb
 			lv2:CVPort, mod:CVPort ;
 		lv2:index 2 ;
 		lv2:symbol "position" ;
-		lv2:name "pre-delay";
+		lv2:name "Pre-Delay";
 		lv2:default 0.0 ;
 		lv2:minimum 0.0 ;
 		lv2:maximum 1.0 ;
@@ -1311,7 +1311,7 @@ clouds:oliverb
 
 clouds:resonestor
 	a lv2:Plugin, lv2:ModulatorPlugin, mod:ControlVoltagePlugin ;
-	doap:name "Poly Clouds Resonestor" ;
+	doap:name "Clouds Resonestor" ;
 	doap:license <http://opensource.org/licenses/gpl> ;
     rdfs:comment """
     TODO
@@ -1322,7 +1322,7 @@ clouds:resonestor
         foaf:homepage <https://github.com/gavocanov/cth-mods>;
     ] ;
     mod:brand "cTh-mods" ;
-    mod:label "Clouds" ;
+    mod:label "Clouds Resonator" ;
     lv2:microVersion 1 ;
     lv2:minorVersion 0 ;
 	lv2:requiredFeature urid:map ;
@@ -1571,7 +1571,7 @@ clouds:resonestor
 
 clouds:beat_repeat
 	a lv2:Plugin, lv2:DelayPlugin, mod:ControlVoltagePlugin ;
-	doap:name "Poly Clouds Beat Repeat" ;
+	doap:name "Clouds Beat Repeat" ;
 	doap:license <http://opensource.org/licenses/gpl> ;
     rdfs:comment """
     TODO
@@ -1582,7 +1582,7 @@ clouds:beat_repeat
         foaf:homepage <https://github.com/gavocanov/cth-mods>;
     ] ;
     mod:brand "cTh-mods" ;
-    mod:label "Clouds" ;
+    mod:label "Clouds Beat Repeat" ;
     lv2:microVersion 1 ;
     lv2:minorVersion 0 ;
 	lv2:requiredFeature urid:map ;
