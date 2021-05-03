@@ -161,6 +161,7 @@ all: $(BUILDDIR)manifest.ttl \
 	$(BUILDDIR)$(LV2NAME_CLOUDS)-st-gui.ttl \
 	$(BUILDDIR)$(LV2NAME_MARBLES)-gui.ttl \
 	$(BUILDDIR)$(LV2NAME_RINGS)-gui.ttl \
+	$(BUILDDIR)$(LV2NAME_PLAITS)-gui.ttl \
 	$(targets)
 
 lv2syms:
